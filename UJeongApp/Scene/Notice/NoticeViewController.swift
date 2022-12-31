@@ -28,8 +28,6 @@ final class NoticeViewController: UIViewController {
             }
         })
         
-    
-    
     private func bind(viewModel: NoticeViewModel) {
         let viewWillAppear = self.rx.viewWillAppear
             .mapToVoid()
@@ -74,48 +72,3 @@ final class NoticeViewController: UIViewController {
         }
     }
 }
-
-final class NoticeViewModel: ViewModelType {
-    struct Input {
-        let searchTrigger: Driver<Void>
-        let selection: Driver<IndexPath>
-    }
-    
-    struct Output {
-        let notices: Driver<[NoticeSection]>
-        let selectedNotice: Driver<Notice>
-    }
-    
-    private let useCase: NoticeUseCase
-    
-    init(useCase: NoticeUseCaseImpl) {
-        self.useCase = useCase
-    }
-    
-    func transform(input: Input) -> Output {
-        
-        return Output(notices: .empty(),
-                      selectedNotice: .empty())
-    }
-}
-
-
-//final class NoticeViewModel: ViewModelType {
-//    typealias Input = <#type#>
-//
-//    typealias Output = <#type#>
-//
-//    let input = PublishSubject<String>()
-//
-//    let output: Driver<SearchInfomation>
-//
-//    init(apiClient: APIClient = APIClient()) {
-//        self.output = apiClient.searchWithRx()
-//            .asDriver(onErrorJustReturn: .init(totalCount: nil, incompleteResults: nil, items: []))
-//
-//    }
-//}
-//
-//extension NoticeViewController {
-//
-//}

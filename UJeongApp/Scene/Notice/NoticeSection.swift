@@ -36,4 +36,14 @@ extension NoticeSection: SectionModelType {
         case .noticeCell: self = .noticeCell(items)
         }
     }
+    
+    func convertToSection(from items: [Notice]) -> [NoticeSection] {
+        let noticeItems: [NoticeSectionItem] = items.map { notice in
+            let viewModel = NoticeCellViewModel(with: notice)
+            return NoticeSectionItem.noticeCell(viewModel)
+        }
+        
+        let noticeSection: NoticeSection = NoticeSection.noticeCell(noticeItems)
+        return [noticeSection]
+    }
 }

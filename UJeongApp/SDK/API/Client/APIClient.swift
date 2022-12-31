@@ -122,28 +122,6 @@ final class APIClient {
     }
 }
 
-extension APIClient {
-    
-    func search(q: String, page: Int, resultHandler: @escaping (Result<SearchInfomation, Error>) -> Void) {
-        let request = SearchRequest(q: q, page: page)
-        self.send(request) { result in
-            switch result {
-            case .success(let response):
-                resultHandler(.success(response))
-            case .failure(let error):
-                resultHandler(.failure(error))
-            }
-        }
-    }
-    
-    func searchWithRx() -> Observable<SearchInfomation> {
-        let request = SearchRequest(q: "RxSwift", page: 1)
-        let apiCall = self.sendWithRx(request)
-        print("✅v \(apiCall)")
-        return apiCall
-    }
-}
-
 struct SearchInfomation: Codable {
     let totalCount: Int?
     let incompleteResults: Bool?

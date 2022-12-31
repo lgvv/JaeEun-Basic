@@ -45,6 +45,8 @@
 		B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5929602B0B0016EFCD /* Observable+.swift */; };
 		B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */; };
 		B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */; };
+		B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */; };
+		B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		B1CA9A5929602B0B0016EFCD /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeRepository.swift; sourceTree = "<group>"; };
 		B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCase.swift; sourceTree = "<group>"; };
+		B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeNavigator.swift; sourceTree = "<group>"; };
+		B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */,
+				B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */,
+				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
 				B1CA9A49296009B60016EFCD /* NoticeSection.swift */,
+				B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -290,7 +297,6 @@
 		B1CA9A4F296025060016EFCD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
 				B1CA9A2A295FF6970016EFCD /* Notice */,
 				B1CA9A462960095A0016EFCD /* Cells */,
 			);
@@ -445,11 +451,13 @@
 				B1CA9A3A295FF7970016EFCD /* ReusableCell.swift in Sources */,
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
 				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
+				B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */,
 				B1CA9A37295FF7970016EFCD /* UICollectionView+RxReusableKit.swift in Sources */,
 				B18EB8E1295DFA9B001E08D7 /* SceneDelegate.swift in Sources */,
 				B18EB916295DFAC2001E08D7 /* APIClient.swift in Sources */,
 				B1CA9A39295FF7970016EFCD /* UICollectionView+ReusableKit.swift in Sources */,
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
+				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
 				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
 				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
