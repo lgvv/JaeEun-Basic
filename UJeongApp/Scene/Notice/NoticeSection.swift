@@ -22,7 +22,7 @@ enum NoticeSection {
     case noticeCell([NoticeSectionItem])
 }
 
-extension NoticeSection {
+extension NoticeSection: SectionModelType {
     typealias Item = NoticeSectionItem
     
     var items: [NoticeSectionItem] {

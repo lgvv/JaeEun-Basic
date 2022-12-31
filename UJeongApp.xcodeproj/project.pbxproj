@@ -39,6 +39,12 @@
 		B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */; };
 		B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A49296009B60016EFCD /* NoticeSection.swift */; };
 		B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */; };
+		B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A52296029890016EFCD /* UIViewController+Rx.swift */; };
+		B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A55296029B30016EFCD /* NSCollectionLayoutItem+.swift */; };
+		B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A57296029D30016EFCD /* NSCollectionLayoutSize.swift */; };
+		B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5929602B0B0016EFCD /* Observable+.swift */; };
+		B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */; };
+		B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCellViewModel.swift; sourceTree = "<group>"; };
 		B1CA9A49296009B60016EFCD /* NoticeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeSection.swift; sourceTree = "<group>"; };
 		B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayoutSet.swift; sourceTree = "<group>"; };
+		B1CA9A52296029890016EFCD /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		B1CA9A55296029B30016EFCD /* NSCollectionLayoutItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutItem+.swift"; sourceTree = "<group>"; };
+		B1CA9A57296029D30016EFCD /* NSCollectionLayoutSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutSize.swift; sourceTree = "<group>"; };
+		B1CA9A5929602B0B0016EFCD /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
+		B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeRepository.swift; sourceTree = "<group>"; };
+		B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +151,10 @@
 				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
 				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
 				B1CA9A4F296025060016EFCD /* Scene */,
+				B1CA9A27295FF40F0016EFCD /* Common */,
+				B1CA9A542960298C0016EFCD /* Extension */,
 				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
 				B1CA9A28295FF41C0016EFCD /* SDK */,
-				B1CA9A42296003030016EFCD /* Domain */,
 			);
 			path = UJeongApp;
 			sourceTree = "<group>";
@@ -193,6 +206,8 @@
 		B1CA9A28295FF41C0016EFCD /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */,
+				B1CA9A432960030C0016EFCD /* Models */,
 				B18EB90E295DFAC2001E08D7 /* API */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
@@ -238,20 +253,12 @@
 			path = ReusableKit;
 			sourceTree = "<group>";
 		};
-		B1CA9A42296003030016EFCD /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A432960030C0016EFCD /* Entities */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		B1CA9A432960030C0016EFCD /* Entities */ = {
+		B1CA9A432960030C0016EFCD /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B1CA9A40296002FC0016EFCD /* Notice.swift */,
 			);
-			path = Entities;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B1CA9A462960095A0016EFCD /* Cells */ = {
@@ -283,11 +290,22 @@
 		B1CA9A4F296025060016EFCD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
 				B1CA9A2A295FF6970016EFCD /* Notice */,
 				B1CA9A462960095A0016EFCD /* Cells */,
-				B1CA9A27295FF40F0016EFCD /* Common */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		B1CA9A542960298C0016EFCD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A52296029890016EFCD /* UIViewController+Rx.swift */,
+				B1CA9A55296029B30016EFCD /* NSCollectionLayoutItem+.swift */,
+				B1CA9A57296029D30016EFCD /* NSCollectionLayoutSize.swift */,
+				B1CA9A5929602B0B0016EFCD /* Observable+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,22 +429,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */,
 				B1CA9A41296002FC0016EFCD /* Notice.swift in Sources */,
 				B18EB914295DFAC2001E08D7 /* Response.swift in Sources */,
+				B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */,
 				B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */,
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
 				B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */,
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
+				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
+				B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */,
 				B1CA9A3A295FF7970016EFCD /* ReusableCell.swift in Sources */,
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
+				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
 				B1CA9A37295FF7970016EFCD /* UICollectionView+RxReusableKit.swift in Sources */,
 				B18EB8E1295DFA9B001E08D7 /* SceneDelegate.swift in Sources */,
 				B18EB916295DFAC2001E08D7 /* APIClient.swift in Sources */,
 				B1CA9A39295FF7970016EFCD /* UICollectionView+ReusableKit.swift in Sources */,
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
+				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
 				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
 				B1CA9A26295FF4050016EFCD /* ViewModelType.swift in Sources */,

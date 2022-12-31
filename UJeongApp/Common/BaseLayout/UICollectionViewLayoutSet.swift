@@ -30,18 +30,3 @@ final class UICollectionViewLayoutSet: UICollectionViewLayoutSetProtocol {
         return secion
     }
 }
-
-extension NSCollectionLayoutItem {
-    convenience init(_ layoutSize: NSCollectionLayoutSize) {
-        self.init(layoutSize: layoutSize)
-    }
-}
-
-extension NSCollectionLayoutSize {
-    convenience init(
-        _ widthDimension: NSCollectionLayoutDimension,
-        _ heightDimension: NSCollectionLayoutDimension
-    ) {
-        self.init(widthDimension: widthDimension, heightDimension: heightDimension)
-    }
-}
