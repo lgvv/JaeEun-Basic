@@ -138,9 +138,7 @@
 			children = (
 				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
 				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
-				B1CA9A462960095A0016EFCD /* Cells */,
-				B1CA9A2A295FF6970016EFCD /* Notice */,
-				B1CA9A27295FF40F0016EFCD /* Common */,
+				B1CA9A4F296025060016EFCD /* Scene */,
 				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
 				B1CA9A28295FF41C0016EFCD /* SDK */,
 				B1CA9A42296003030016EFCD /* Domain */,
@@ -280,6 +278,16 @@
 				B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */,
 			);
 			path = BaseLayout;
+			sourceTree = "<group>";
+		};
+		B1CA9A4F296025060016EFCD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A2A295FF6970016EFCD /* Notice */,
+				B1CA9A462960095A0016EFCD /* Cells */,
+				B1CA9A27295FF40F0016EFCD /* Common */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
