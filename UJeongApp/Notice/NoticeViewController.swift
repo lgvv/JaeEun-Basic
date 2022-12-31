@@ -11,16 +11,32 @@ import RxCocoa
 import SnapKit
 
 final class NoticeViewController: UIViewController {
+    private let disposeBag = DisposeBag()
+    
+    var viewModel: NoticeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - UIComponents
+    lazy var collectionView = UICollectionView()
+    
+    func createLayout() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection in
+            
+            switch section {
+            case 0: return UICollectionViewLayoutSet.shared.notice()
+            default: return UICollectionViewLayoutSet.shared.notice()
+            }
+        }
     }
 }
 
 final class NoticeViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         
-        return Output(notices: <#T##Driver<SearchInfomation>#>)
+        return Output(notices: .empty())
     }
 }
 
