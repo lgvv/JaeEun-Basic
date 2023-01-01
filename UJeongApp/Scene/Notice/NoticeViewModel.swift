@@ -21,14 +21,16 @@ final class NoticeViewModel: ViewModelType {
     }
     
     private let useCase: NoticeUseCase
+    private let navigator: NoticeNavigator
     
-    init(useCase: NoticeUseCaseImpl) {
+    init(useCase: NoticeUseCase, navigator: NoticeNavigator) {
         self.useCase = useCase
+        self.navigator = navigator
     }
     
     func transform(input: Input) -> Output {
         
-        let selectedPost = input.selection
+//        let selectedPost = input.selection
             
         
         return Output(notices: .empty(),

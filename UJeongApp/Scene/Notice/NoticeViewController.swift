@@ -50,6 +50,7 @@ final class NoticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
         bind(viewModel: viewModel)
     }
     
@@ -58,6 +59,7 @@ final class NoticeViewController: UIViewController {
         let layout = createLayout()
         var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(Reusable.notice)
+        cv.refreshControl = UIRefreshControl()
         
         return cv
     }()
@@ -69,6 +71,15 @@ final class NoticeViewController: UIViewController {
             case 0: return UICollectionViewLayoutSet.shared.notice()
             default: return UICollectionViewLayoutSet.shared.notice()
             }
+        }
+    }
+}
+
+extension NoticeViewController {
+    func configureUI() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
 }
