@@ -23,6 +23,7 @@ final class NoticeViewController: UIViewController {
             switch item {
             case .noticeCell(let viewModel):
                 let cell = collectionView.dequeue(Reusable.notice, for: indexPath)
+                cell.bind(viewModel)
                 
                 return cell
             }
@@ -63,7 +64,9 @@ final class NoticeViewController: UIViewController {
         
         return cv
     }()
-    
+}
+
+extension NoticeViewController {
     func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection in
             
@@ -73,9 +76,7 @@ final class NoticeViewController: UIViewController {
             }
         }
     }
-}
-
-extension NoticeViewController {
+    
     func configureUI() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
