@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A712961723C0016EFCD /* APP */,
-				B1CA9A64296169180016EFCD /* Domain */,
+				B1CA9A64296169180016EFCD /* Core */,
 				B1CA9A28295FF41C0016EFCD /* SDK */,
 			);
 			path = UJeongApp;
@@ -214,7 +214,6 @@
 			children = (
 				B1CA9A65296169890016EFCD /* Repository */,
 				B18EB90E295DFAC2001E08D7 /* API */,
-				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
 			path = SDK;
 			sourceTree = "<group>";
@@ -313,13 +312,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B1CA9A64296169180016EFCD /* Domain */ = {
+		B1CA9A64296169180016EFCD /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				B1CA9A432960030C0016EFCD /* Models */,
 				B1CA9A7029616E3C0016EFCD /* UseCases */,
+				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
-			path = Domain;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		B1CA9A65296169890016EFCD /* Repository */ = {
