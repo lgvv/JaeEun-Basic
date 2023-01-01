@@ -155,6 +155,7 @@
 				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
 				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
 				B1CA9A4F296025060016EFCD /* Scene */,
+				B1CA9A64296169180016EFCD /* Domain */,
 				B1CA9A27295FF40F0016EFCD /* Common */,
 				B1CA9A542960298C0016EFCD /* Extension */,
 				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
@@ -210,7 +211,7 @@
 		B1CA9A28295FF41C0016EFCD /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */,
+				B1CA9A65296169890016EFCD /* Repository */,
 				B1CA9A432960030C0016EFCD /* Models */,
 				B18EB90E295DFAC2001E08D7 /* API */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
@@ -233,7 +234,6 @@
 			children = (
 				B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */,
 				B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */,
-				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
 				B1CA9A49296009B60016EFCD /* NoticeSection.swift */,
 				B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */,
 			);
@@ -271,8 +271,7 @@
 		B1CA9A462960095A0016EFCD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A44296009560016EFCD /* NoticeCell.swift */,
-				B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */,
+				B1CA9A66296169D70016EFCD /* Notice */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -312,6 +311,31 @@
 				B1CA9A5929602B0B0016EFCD /* Observable+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B1CA9A64296169180016EFCD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B1CA9A65296169890016EFCD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B1CA9A66296169D70016EFCD /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A44296009560016EFCD /* NoticeCell.swift */,
+				B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
