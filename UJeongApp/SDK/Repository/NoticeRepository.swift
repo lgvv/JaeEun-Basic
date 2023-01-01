@@ -12,7 +12,7 @@ protocol NoticeRepository {
     func getSearchRepository() -> Observable<SearchInfomation>
 }
 
-final class NoticeRepositoryImpl: NoticeRepository {
+final public class NoticeRepositoryImpl: NoticeRepository {
     private let apiClient: APIClient
 
     init(_ apiClient: APIClient = APIClient()) {

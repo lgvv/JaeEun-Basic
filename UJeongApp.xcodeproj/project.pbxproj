@@ -47,6 +47,9 @@
 		B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */; };
 		B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */; };
 		B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */; };
+		B1CA9A6829616A290016EFCD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6729616A290016EFCD /* Application.swift */; };
+		B1CA9A6A29616AB70016EFCD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */; };
+		B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCase.swift; sourceTree = "<group>"; };
 		B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeNavigator.swift; sourceTree = "<group>"; };
 		B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
+		B1CA9A6729616A290016EFCD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCaseProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,13 +158,8 @@
 		B18EB8DD295DFA9B001E08D7 /* UJeongApp */ = {
 			isa = PBXGroup;
 			children = (
-				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
-				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
-				B1CA9A4F296025060016EFCD /* Scene */,
+				B1CA9A712961723C0016EFCD /* APP */,
 				B1CA9A64296169180016EFCD /* Domain */,
-				B1CA9A27295FF40F0016EFCD /* Common */,
-				B1CA9A542960298C0016EFCD /* Extension */,
-				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
 				B1CA9A28295FF41C0016EFCD /* SDK */,
 			);
 			path = UJeongApp;
@@ -212,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A65296169890016EFCD /* Repository */,
-				B1CA9A432960030C0016EFCD /* Models */,
 				B18EB90E295DFAC2001E08D7 /* API */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
@@ -316,7 +316,8 @@
 		B1CA9A64296169180016EFCD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
+				B1CA9A432960030C0016EFCD /* Models */,
+				B1CA9A7029616E3C0016EFCD /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -336,6 +337,46 @@
 				B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */,
 			);
 			path = Notice;
+			sourceTree = "<group>";
+		};
+		B1CA9A6B29616D350016EFCD /* NoticePlatform */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A6D29616D8B0016EFCD /* UseCases */,
+			);
+			path = NoticePlatform;
+			sourceTree = "<group>";
+		};
+		B1CA9A6D29616D8B0016EFCD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A5E2960545C0016EFCD /* NoticeUseCase.swift */,
+				B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B1CA9A7029616E3C0016EFCD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B1CA9A712961723C0016EFCD /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
+				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
+				B1CA9A6729616A290016EFCD /* Application.swift */,
+				B1CA9A4F296025060016EFCD /* Scene */,
+				B1CA9A6B29616D350016EFCD /* NoticePlatform */,
+				B1CA9A27295FF40F0016EFCD /* Common */,
+				B1CA9A542960298C0016EFCD /* Extension */,
+				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
+			);
+			path = APP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,12 +508,15 @@
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
+				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
 				B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */,
+				B1CA9A6A29616AB70016EFCD /* UseCaseProvider.swift in Sources */,
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
 				B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */,
 				B1CA9A3A295FF7970016EFCD /* ReusableCell.swift in Sources */,
+				B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */,
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
 				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
 				B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */,
@@ -642,7 +686,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 38PD5AHVVF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UJeongApp/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = UJeongApp/APP/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -672,7 +716,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 38PD5AHVVF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UJeongApp/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = UJeongApp/APP/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -33,6 +33,3 @@ class DefaultNoticeNavigator: NoticeNavigator {
     func toNoticeDetail() { }
 }
 
-protocol UseCaseProvider {
-    func makeNoticeUseCase() -> NoticeUseCase
-}
