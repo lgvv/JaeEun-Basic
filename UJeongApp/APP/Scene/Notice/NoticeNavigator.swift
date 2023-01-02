@@ -16,11 +16,11 @@ protocol NoticeNavigator {
 
 class DefaultNoticeNavigator: NoticeNavigator {
     private let navigationController: UINavigationController
-    private let services: UseCaseProvider
+    private let services: NoticeUseCaseProvider
     
     init(
         navigationController: UINavigationController,
-        services: UseCaseProvider
+        services: NoticeUseCaseProvider
     ) {
         self.navigationController = navigationController
         self.services = services

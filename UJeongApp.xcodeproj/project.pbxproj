@@ -47,11 +47,11 @@
 		B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */; };
 		B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */; };
 		B1CA9A6829616A290016EFCD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6729616A290016EFCD /* Application.swift */; };
-		B1CA9A6A29616AB70016EFCD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */; };
 		B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */; };
 		B1CA9A76296192FB0016EFCD /* LocationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */; };
 		B1CA9A792962C37D0016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A782962C37D0016EFCD /* ComposableArchitecture */; };
 		B1CA9A7B2962C3FD0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */; };
+		B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,10 +99,10 @@
 		B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeNavigator.swift; sourceTree = "<group>"; };
 		B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 		B1CA9A6729616A290016EFCD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCaseProvider.swift; sourceTree = "<group>"; };
 		B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingView.swift; sourceTree = "<group>"; };
 		B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A2A295FF6970016EFCD /* Notice */,
+				B1CA9A7E2962FB1D0016EFCD /* Politician */,
 				B1CA9A462960095A0016EFCD /* Cells */,
 				B1CA9A74296189F60016EFCD /* LocationSetting */,
 			);
@@ -321,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A432960030C0016EFCD /* Models */,
-				B1CA9A7029616E3C0016EFCD /* UseCases */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
 			path = Core;
@@ -361,14 +361,6 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		B1CA9A7029616E3C0016EFCD /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		B1CA9A712961723C0016EFCD /* APP */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +383,14 @@
 				B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */,
 			);
 			path = LocationSetting;
+			sourceTree = "<group>";
+		};
+		B1CA9A7E2962FB1D0016EFCD /* Politician */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */,
+			);
+			path = Politician;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,8 +526,8 @@
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
 				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
 				B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */,
-				B1CA9A6A29616AB70016EFCD /* UseCaseProvider.swift in Sources */,
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
+				B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
 				B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */,

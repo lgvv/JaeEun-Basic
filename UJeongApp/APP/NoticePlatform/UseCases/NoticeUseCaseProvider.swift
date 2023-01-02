@@ -7,11 +7,15 @@
 
 import Foundation
 
-public final class NoticeUseCaseProvider: UseCaseProvider {
+protocol NoticeUseCaseProviderProtocol {
+    func makeNoticeUseCase() -> NoticeUseCase
+}
+
+public final class NoticeUseCaseProvider: NoticeUseCaseProviderProtocol {
     private let noticeRepository: NoticeRepository
     
     init() {
-        noticeRepository = NoticeRepositoryImpl()
+        self.noticeRepository = NoticeRepositoryImpl()
     }
     
     func makeNoticeUseCase() -> NoticeUseCase {
