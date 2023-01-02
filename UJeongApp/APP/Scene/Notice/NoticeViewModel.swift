@@ -12,7 +12,7 @@ import RxCocoa
 final class NoticeViewModel: ViewModelType {
     struct Input {
         let didTapLocation: Driver<Void>
-        let fetchNoticeTrigger: Driver<Void>
+        let fetchTrigger: Driver<Void>
         let selection: Driver<IndexPath>
     }
     

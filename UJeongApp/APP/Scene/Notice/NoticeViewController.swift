@@ -40,7 +40,7 @@ final class NoticeViewController: UIViewController {
             .asDriver()
         
         let input = NoticeViewModel.Input(didTapLocation: location.rx.tap.asDriver(),
-                                          fetchNoticeTrigger: Driver.merge(viewWillAppear, pull),
+                                          fetchTrigger: Driver.merge(viewWillAppear, pull),
                                           selection: collectionView.rx.itemSelected.asDriver())
         
         let output = viewModel.transform(input: input)

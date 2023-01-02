@@ -5,15 +5,17 @@
 //  Created by Hamlit Jason on 2023/01/02.
 //
 
-import Foundation
+import UIKit
+import RxSwift
+import RxCocoa
 
 final class PoliticianViewModel: ViewModelType {
     struct Input {
-        
+        let fetchTrigger: Driver<Void>
     }
     
     struct Output {
-        
+        let politicians: Driver<[Politician]>
     }
     
     private let useCase: PoliticianUseCase
@@ -26,7 +28,7 @@ final class PoliticianViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         
-        return Output()
+        return Output(politicians: .empty())
     }
     
 }
