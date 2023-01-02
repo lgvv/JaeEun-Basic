@@ -48,9 +48,6 @@
 		B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */; };
 		B1CA9A6829616A290016EFCD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6729616A290016EFCD /* Application.swift */; };
 		B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */; };
-		B1CA9A76296192FB0016EFCD /* LocationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */; };
-		B1CA9A792962C37D0016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A782962C37D0016EFCD /* ComposableArchitecture */; };
-		B1CA9A7B2962C3FD0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */; };
 		B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */; };
 		B1CA9A8029630A4F0016EFCD /* ViewTemplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A7F29630A4F0016EFCD /* ViewTemplete.swift */; };
 		B1CA9A8329630B5A0016EFCD /* PoliticianViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8229630B5A0016EFCD /* PoliticianViewModel.swift */; };
@@ -67,6 +64,12 @@
 		B1CA9AA0296337E00016EFCD /* SwiftLayoutUtil in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9F296337E00016EFCD /* SwiftLayoutUtil */; };
 		B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */; };
 		B1CA9AA429635DF80016EFCD /* PoliticianMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */; };
+		B1CA9AAA2963635D0016EFCD /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA62963635C0016EFCD /* MemoView.swift */; };
+		B1CA9AAB2963635D0016EFCD /* MemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA72963635C0016EFCD /* MemoClient.swift */; };
+		B1CA9AAC2963635D0016EFCD /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA82963635C0016EFCD /* Memo.swift */; };
+		B1CA9AAD2963635D0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA92963635D0016EFCD /* CounterView.swift */; };
+		B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AAF296363B90016EFCD /* ComposableArchitecture */; };
+		B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AB1296363B90016EFCD /* Dependencies */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +118,6 @@
 		B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewModel.swift; sourceTree = "<group>"; };
 		B1CA9A6729616A290016EFCD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCaseProvider.swift; sourceTree = "<group>"; };
-		B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingView.swift; sourceTree = "<group>"; };
-		B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianViewController.swift; sourceTree = "<group>"; };
 		B1CA9A7F29630A4F0016EFCD /* ViewTemplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTemplete.swift; sourceTree = "<group>"; };
 		B1CA9A8229630B5A0016EFCD /* PoliticianViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianViewModel.swift; sourceTree = "<group>"; };
@@ -129,6 +130,10 @@
 		B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCell.swift; sourceTree = "<group>"; };
 		B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCellViewModel.swift; sourceTree = "<group>"; };
 		B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianMainCell.swift; sourceTree = "<group>"; };
+		B1CA9AA62963635C0016EFCD /* MemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		B1CA9AA72963635C0016EFCD /* MemoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoClient.swift; sourceTree = "<group>"; };
+		B1CA9AA82963635C0016EFCD /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		B1CA9AA92963635D0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +143,7 @@
 			files = (
 				B1CA9A2D295FF72A0016EFCD /* Differentiator in Frameworks */,
 				B18EB920295DFB15001E08D7 /* RxRelay in Frameworks */,
+				B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */,
 				B18EB91E295DFB15001E08D7 /* RxCocoa in Frameworks */,
 				B1CA9A9829632FFA0016EFCD /* PinLayout in Frameworks */,
 				B1CA9AA0296337E00016EFCD /* SwiftLayoutUtil in Frameworks */,
@@ -145,8 +151,8 @@
 				B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */,
 				B1CA9A2F295FF72A0016EFCD /* RxDataSources in Frameworks */,
 				B1CA9A9B296330350016EFCD /* FlexLayout in Frameworks */,
+				B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */,
 				B1CA9A9E296337E00016EFCD /* SwiftLayout in Frameworks */,
-				B1CA9A792962C37D0016EFCD /* ComposableArchitecture in Frameworks */,
 				B18EB927295DFB3F001E08D7 /* ReactorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,8 +420,10 @@
 		B1CA9A74296189F60016EFCD /* LocationSetting */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */,
-				B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */,
+				B1CA9AA92963635D0016EFCD /* CounterView.swift */,
+				B1CA9AA82963635C0016EFCD /* Memo.swift */,
+				B1CA9AA72963635C0016EFCD /* MemoClient.swift */,
+				B1CA9AA62963635C0016EFCD /* MemoView.swift */,
 			);
 			path = LocationSetting;
 			sourceTree = "<group>";
@@ -506,11 +514,12 @@
 				B18EB929295DFB4C001E08D7 /* SnapKit */,
 				B1CA9A2C295FF72A0016EFCD /* Differentiator */,
 				B1CA9A2E295FF72A0016EFCD /* RxDataSources */,
-				B1CA9A782962C37D0016EFCD /* ComposableArchitecture */,
 				B1CA9A9729632FFA0016EFCD /* PinLayout */,
 				B1CA9A9A296330350016EFCD /* FlexLayout */,
 				B1CA9A9D296337E00016EFCD /* SwiftLayout */,
 				B1CA9A9F296337E00016EFCD /* SwiftLayoutUtil */,
+				B1CA9AAF296363B90016EFCD /* ComposableArchitecture */,
+				B1CA9AB1296363B90016EFCD /* Dependencies */,
 			);
 			productName = UJeongApp;
 			productReference = B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */;
@@ -571,10 +580,10 @@
 				B18EB925295DFB3F001E08D7 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				B18EB928295DFB4C001E08D7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				B1CA9A772962C37D0016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				B1CA9A9629632FFA0016EFCD /* XCRemoteSwiftPackageReference "PinLayout" */,
 				B1CA9A99296330350016EFCD /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				B1CA9A9C296337E00016EFCD /* XCRemoteSwiftPackageReference "SwiftLayout" */,
+				B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = B18EB8DC295DFA9B001E08D7 /* Products */;
 			projectDirPath = "";
@@ -610,7 +619,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CA9A76296192FB0016EFCD /* LocationSettingView.swift in Sources */,
 				B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */,
 				B1CA9A41296002FC0016EFCD /* Notice.swift in Sources */,
 				B18EB914295DFAC2001E08D7 /* Response.swift in Sources */,
@@ -619,7 +627,6 @@
 				B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */,
 				B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */,
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
-				B1CA9A7B2962C3FD0016EFCD /* CounterView.swift in Sources */,
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
 				B1CA9A8B29630C040016EFCD /* PoliticianRepsitory.swift in Sources */,
@@ -630,6 +637,7 @@
 				B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */,
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
 				B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */,
+				B1CA9AAB2963635D0016EFCD /* MemoClient.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
 				B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */,
@@ -640,6 +648,7 @@
 				B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */,
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
 				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
+				B1CA9AAA2963635D0016EFCD /* MemoView.swift in Sources */,
 				B1CA9A9229632AC80016EFCD /* PoliticianSection.swift in Sources */,
 				B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */,
 				B1CA9A37295FF7970016EFCD /* UICollectionView+RxReusableKit.swift in Sources */,
@@ -649,10 +658,12 @@
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
 				B1CA9A8729630B9E0016EFCD /* Policician.swift in Sources */,
 				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
+				B1CA9AAC2963635D0016EFCD /* Memo.swift in Sources */,
 				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
 				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
 				B1CA9A26295FF4050016EFCD /* ViewModelType.swift in Sources */,
+				B1CA9AAD2963635D0016EFCD /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,14 +982,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B1CA9A772962C37D0016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
 		B1CA9A9629632FFA0016EFCD /* XCRemoteSwiftPackageReference "PinLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/layoutBox/PinLayout";
@@ -1001,6 +1004,14 @@
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
+			};
+		};
+		B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1051,11 +1062,6 @@
 			package = B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
 		};
-		B1CA9A782962C37D0016EFCD /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1CA9A772962C37D0016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
 		B1CA9A9729632FFA0016EFCD /* PinLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1CA9A9629632FFA0016EFCD /* XCRemoteSwiftPackageReference "PinLayout" */;
@@ -1075,6 +1081,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1CA9A9C296337E00016EFCD /* XCRemoteSwiftPackageReference "SwiftLayout" */;
 			productName = SwiftLayoutUtil;
+		};
+		B1CA9AAF296363B90016EFCD /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		B1CA9AB1296363B90016EFCD /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
