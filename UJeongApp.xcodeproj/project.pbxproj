@@ -65,6 +65,7 @@
 		B1CA9A9B296330350016EFCD /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9A296330350016EFCD /* FlexLayout */; };
 		B1CA9A9E296337E00016EFCD /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9D296337E00016EFCD /* SwiftLayout */; };
 		B1CA9AA0296337E00016EFCD /* SwiftLayoutUtil in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9F296337E00016EFCD /* SwiftLayoutUtil */; };
+		B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		B1CA9A8E29630C5B0016EFCD /* PoliticianUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianUseCaseProvider.swift; sourceTree = "<group>"; };
 		B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianSection.swift; sourceTree = "<group>"; };
 		B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCell.swift; sourceTree = "<group>"; };
+		B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,7 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A66296169D70016EFCD /* Notice */,
-				B1CA9A9529632B690016EFCD /* Politician */,
+				B1CA9A9529632B690016EFCD /* PoliticianCard */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -460,12 +462,13 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		B1CA9A9529632B690016EFCD /* Politician */ = {
+		B1CA9A9529632B690016EFCD /* PoliticianCard */ = {
 			isa = PBXGroup;
 			children = (
 				B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */,
+				B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */,
 			);
-			path = Politician;
+			path = PoliticianCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,6 +605,7 @@
 				B18EB914295DFAC2001E08D7 /* Response.swift in Sources */,
 				B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */,
 				B1CA9A8929630BB60016EFCD /* PoliticianUseCase.swift in Sources */,
+				B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */,
 				B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */,
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
 				B1CA9A7B2962C3FD0016EFCD /* CounterView.swift in Sources */,
