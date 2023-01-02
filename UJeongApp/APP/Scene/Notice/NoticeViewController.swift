@@ -30,6 +30,7 @@ final class NoticeViewController: UIViewController {
         })
         
     private func bind(viewModel: NoticeViewModel) {
+        
         let viewWillAppear = self.rx.viewWillAppear
             .mapToVoid()
             .asDriverOnErrorJustComplete()
@@ -38,24 +39,38 @@ final class NoticeViewController: UIViewController {
             .controlEvent(.valueChanged)
             .asDriver()
         
-        let input = NoticeViewModel.Input(searchTrigger: Driver.merge(viewWillAppear, pull),
+        let input = NoticeViewModel.Input(didTapLocation: location.rx.tap.asDriver(),
+                                          fetchNoticeTrigger: Driver.merge(viewWillAppear, pull),
                                           selection: collectionView.rx.itemSelected.asDriver())
         
         let output = viewModel.transform(input: input)
         
         disposeBag.insert {
             output.notices.drive(collectionView.rx.items(dataSource: self.dataSource))
+            
+            output.showsLocationView
+                .debug("🦣")
+                .drive()
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    init(viewModel: NoticeViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
         
-        configureUI()
-        bind(viewModel: viewModel)
+        self.configureUI()
+        self.configureNavigationItem()
+        
+        self.bind(viewModel: viewModel)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - UIComponents
+    var location = UIBarButtonItem()
+    
     lazy var collectionView: UICollectionView = {
         let layout = createLayout()
         var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -82,5 +97,14 @@ extension NoticeViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func configureNavigationItem() {
+        location = UIBarButtonItem(image: UIImage(systemName: "selection.pin.in.out"),
+                                            style: .plain,
+                                            target: self, action: nil)
+        
+        navigationItem.title = "동네 소식"
+        navigationItem.rightBarButtonItems = [location]
     }
 }

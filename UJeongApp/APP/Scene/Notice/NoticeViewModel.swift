@@ -11,13 +11,15 @@ import RxCocoa
 
 final class NoticeViewModel: ViewModelType {
     struct Input {
-        let searchTrigger: Driver<Void>
+        let didTapLocation: Driver<Void>
+        let fetchNoticeTrigger: Driver<Void>
         let selection: Driver<IndexPath>
     }
     
     struct Output {
         let notices: Driver<[NoticeSection]>
         let selectedNotice: Driver<Notice>
+        let showsLocationView: Driver<Void>
     }
     
     private let useCase: NoticeUseCase
@@ -29,12 +31,15 @@ final class NoticeViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        
 //        let selectedPost = input.selection
-            
+        
+        let showsLocationView = input.didTapLocation
+            .do(onNext: navigator.toLocationSetting)
         
         return Output(notices: .empty(),
-                      selectedNotice: .empty())
+                      selectedNotice: .empty(),
+                      showsLocationView: showsLocationView
+        )
     }
 }
 

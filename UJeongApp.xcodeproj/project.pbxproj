@@ -16,7 +16,6 @@
 		B18EB914295DFAC2001E08D7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB910295DFAC2001E08D7 /* Response.swift */; };
 		B18EB915295DFAC2001E08D7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB911295DFAC2001E08D7 /* Request.swift */; };
 		B18EB916295DFAC2001E08D7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB913295DFAC2001E08D7 /* APIClient.swift */; };
-		B18EB919295DFAF8001E08D7 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB918295DFAF8001E08D7 /* RxFlow */; };
 		B18EB91C295DFB15001E08D7 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B18EB91B295DFB15001E08D7 /* RxBlocking */; settings = {ATTRIBUTES = (Required, ); }; };
 		B18EB91E295DFB15001E08D7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB91D295DFB15001E08D7 /* RxCocoa */; };
 		B18EB920295DFB15001E08D7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB91F295DFB15001E08D7 /* RxRelay */; };
@@ -50,6 +49,9 @@
 		B1CA9A6829616A290016EFCD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6729616A290016EFCD /* Application.swift */; };
 		B1CA9A6A29616AB70016EFCD /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */; };
 		B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */; };
+		B1CA9A76296192FB0016EFCD /* LocationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */; };
+		B1CA9A792962C37D0016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A782962C37D0016EFCD /* ComposableArchitecture */; };
+		B1CA9A7B2962C3FD0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		B1CA9A6729616A290016EFCD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		B1CA9A6929616AB70016EFCD /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		B1CA9A6E29616DAA0016EFCD /* NoticeUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUseCaseProvider.swift; sourceTree = "<group>"; };
+		B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingView.swift; sourceTree = "<group>"; };
+		B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +116,8 @@
 				B18EB922295DFB15001E08D7 /* RxSwift in Frameworks */,
 				B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */,
 				B1CA9A2F295FF72A0016EFCD /* RxDataSources in Frameworks */,
+				B1CA9A792962C37D0016EFCD /* ComposableArchitecture in Frameworks */,
 				B18EB927295DFB3F001E08D7 /* ReactorKit in Frameworks */,
-				B18EB919295DFAF8001E08D7 /* RxFlow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +301,7 @@
 			children = (
 				B1CA9A2A295FF6970016EFCD /* Notice */,
 				B1CA9A462960095A0016EFCD /* Cells */,
+				B1CA9A74296189F60016EFCD /* LocationSetting */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -379,6 +384,15 @@
 			path = APP;
 			sourceTree = "<group>";
 		};
+		B1CA9A74296189F60016EFCD /* LocationSetting */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A75296192FB0016EFCD /* LocationSettingView.swift */,
+				B1CA9A7A2962C3FD0016EFCD /* CounterView.swift */,
+			);
+			path = LocationSetting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,7 +410,6 @@
 			);
 			name = UJeongApp;
 			packageProductDependencies = (
-				B18EB918295DFAF8001E08D7 /* RxFlow */,
 				B18EB91D295DFB15001E08D7 /* RxCocoa */,
 				B18EB91F295DFB15001E08D7 /* RxRelay */,
 				B18EB921295DFB15001E08D7 /* RxSwift */,
@@ -404,6 +417,7 @@
 				B18EB929295DFB4C001E08D7 /* SnapKit */,
 				B1CA9A2C295FF72A0016EFCD /* Differentiator */,
 				B1CA9A2E295FF72A0016EFCD /* RxDataSources */,
+				B1CA9A782962C37D0016EFCD /* ComposableArchitecture */,
 			);
 			productName = UJeongApp;
 			productReference = B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */;
@@ -460,11 +474,11 @@
 			);
 			mainGroup = B18EB8D2295DFA9B001E08D7;
 			packageReferences = (
-				B18EB917295DFAF8001E08D7 /* XCRemoteSwiftPackageReference "RxFlow" */,
 				B18EB91A295DFB15001E08D7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				B18EB925295DFB3F001E08D7 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				B18EB928295DFB4C001E08D7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				B1CA9A772962C37D0016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = B18EB8DC295DFA9B001E08D7 /* Products */;
 			projectDirPath = "";
@@ -500,12 +514,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CA9A76296192FB0016EFCD /* LocationSettingView.swift in Sources */,
 				B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */,
 				B1CA9A41296002FC0016EFCD /* Notice.swift in Sources */,
 				B18EB914295DFAC2001E08D7 /* Response.swift in Sources */,
 				B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */,
 				B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */,
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
+				B1CA9A7B2962C3FD0016EFCD /* CounterView.swift in Sources */,
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
 				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
@@ -810,14 +826,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B18EB917295DFAF8001E08D7 /* XCRemoteSwiftPackageReference "RxFlow" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxFlow";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		B18EB91A295DFB15001E08D7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -850,14 +858,17 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B1CA9A772962C37D0016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B18EB918295DFAF8001E08D7 /* RxFlow */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B18EB917295DFAF8001E08D7 /* XCRemoteSwiftPackageReference "RxFlow" */;
-			productName = RxFlow;
-		};
 		B18EB91B295DFB15001E08D7 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B18EB91A295DFB15001E08D7 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -902,6 +913,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
+		};
+		B1CA9A782962C37D0016EFCD /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1CA9A772962C37D0016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

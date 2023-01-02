@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol NoticeNavigator {
     func toNotice()
     func toNoticeDetail()
+    func toLocationSetting()
 }
 
 class DefaultNoticeNavigator: NoticeNavigator {
@@ -25,11 +27,19 @@ class DefaultNoticeNavigator: NoticeNavigator {
     }
     
     func toNotice() {
-        let vc = NoticeViewController()
-        vc.viewModel = NoticeViewModel(useCase: services.makeNoticeUseCase(), navigator: self)
+        let vm = NoticeViewModel(useCase: services.makeNoticeUseCase(), navigator: self)
+        let vc = NoticeViewController(viewModel: vm)
+        
         navigationController.pushViewController(vc, animated: true)
     }
     
     func toNoticeDetail() { }
+    
+    func toLocationSetting() {
+        let view = LocationSettingView()
+        let vc = UIHostingController(rootView: view)
+        
+        navigationController.present(vc, animated: true, completion: nil)
+    }
 }
 
