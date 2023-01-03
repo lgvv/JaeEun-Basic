@@ -69,6 +69,7 @@ final class NoticeViewController: UIViewController {
     }
     
     // MARK: - UIComponents
+    
     var location = UIBarButtonItem()
     
     lazy var collectionView: UICollectionView = {

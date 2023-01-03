@@ -15,7 +15,7 @@ final class PoliticianViewModel: ViewModelType {
     }
     
     struct Output {
-        let politicians: Driver<[Politician]>
+        let politicians: Driver<[PoliticianSection]>
     }
     
     private let useCase: PoliticianUseCase
