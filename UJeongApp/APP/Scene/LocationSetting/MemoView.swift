@@ -9,6 +9,50 @@ import Foundation
 import SwiftUI
 import ComposableArchitecture
 
+// MARK: - MemoElement
+struct Memo: Codable, Equatable, Identifiable {
+    let createdAt, title, viewCount, id: String
+}
+
+typealias Memos = [Memo]
+
+
+// API 통신
+struct MemoClient {
+    
+    /// 단일 아이템 조회
+    var fetchMemoItem: (_ id: String) -> Effect<Memo, Failure>
+    
+    var fetchMemos: () -> Effect<Memos, Failure>
+    
+    struct Failure : Error, Equatable {}
+}
+
+
+extension MemoClient {
+    static let live = Self(
+        fetchMemoItem: { id in
+            Effect.task{
+                let (data, _) = try await URLSession.shared
+                    .data(from: URL(string: "https://603fca51d9528500176060fc.mockapi.io/api/01/todos/\(id)")!)
+                return try JSONDecoder().decode(Memo.self, from: data)
+            }
+            .mapError { _ in Failure() }
+            .eraseToEffect()
+        }, fetchMemos: {
+            Effect.task{
+                let (data, _) = try await URLSession.shared
+                    .data(from: URL(string: "https://603fca51d9528500176060fc.mockapi.io/api/01/todos/")!)
+                return try JSONDecoder().decode([Memo].self, from: data)
+            }
+            .mapError { _ in Failure() }
+            .eraseToEffect()
+        }
+    )
+}
+
+
+
 // 도메인 + 상태
 struct MemoState: Equatable {
     var memos : [Memo] = []
@@ -113,3 +157,16 @@ struct MemoView: View {
         }
     }
 }
+
+//struct CounterView_Previews: PreviewProvider {
+//    static let memoStore = Store(initialState: MemoState(),
+//                          reducer: memoReducer,
+//                          environment: MemoEnvironment(
+//                            memoClient: MemoClient.live,
+//                            mainQueue: .main
+//                          ))
+//
+//    static var previews: some View {
+//        MemoView(store: memoStore)
+//    }
+//}

@@ -65,8 +65,6 @@
 		B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */; };
 		B1CA9AA429635DF80016EFCD /* PoliticianMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */; };
 		B1CA9AAA2963635D0016EFCD /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA62963635C0016EFCD /* MemoView.swift */; };
-		B1CA9AAB2963635D0016EFCD /* MemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA72963635C0016EFCD /* MemoClient.swift */; };
-		B1CA9AAC2963635D0016EFCD /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA82963635C0016EFCD /* Memo.swift */; };
 		B1CA9AAD2963635D0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA92963635D0016EFCD /* CounterView.swift */; };
 		B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AAF296363B90016EFCD /* ComposableArchitecture */; };
 		B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AB1296363B90016EFCD /* Dependencies */; };
@@ -133,8 +131,6 @@
 		B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCellViewModel.swift; sourceTree = "<group>"; };
 		B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianMainCell.swift; sourceTree = "<group>"; };
 		B1CA9AA62963635C0016EFCD /* MemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
-		B1CA9AA72963635C0016EFCD /* MemoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoClient.swift; sourceTree = "<group>"; };
-		B1CA9AA82963635C0016EFCD /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		B1CA9AA92963635D0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianDistrictRequest.swift; sourceTree = "<group>"; };
 		B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictPoliticianResponse.swift; sourceTree = "<group>"; };
@@ -426,8 +422,6 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9AA92963635D0016EFCD /* CounterView.swift */,
-				B1CA9AA82963635C0016EFCD /* Memo.swift */,
-				B1CA9AA72963635C0016EFCD /* MemoClient.swift */,
 				B1CA9AA62963635C0016EFCD /* MemoView.swift */,
 			);
 			path = LocationSetting;
@@ -651,7 +645,6 @@
 				B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */,
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
 				B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */,
-				B1CA9AAB2963635D0016EFCD /* MemoClient.swift in Sources */,
 				B1CA9AB4296439540016EFCD /* PoliticianDistrictRequest.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
@@ -674,7 +667,6 @@
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
 				B1CA9A8729630B9E0016EFCD /* Policician.swift in Sources */,
 				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
-				B1CA9AAC2963635D0016EFCD /* Memo.swift in Sources */,
 				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
 				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
