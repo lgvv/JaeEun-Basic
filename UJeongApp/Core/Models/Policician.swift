@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Politician {
+struct Politician: Codable {
     let name: String // 정치인 이름
     let party: String // 정당
     let constituency: String // 지역구

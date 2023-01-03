@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol PoliticianUseCase {
-    func fetchPolitician() -> Observable<Politician>
+    func fetchPolitician() -> Observable<[Politician]>
 }
 
 final class PoliticianUseCaseImpl: PoliticianUseCase {
@@ -19,7 +19,7 @@ final class PoliticianUseCaseImpl: PoliticianUseCase {
         self.repository = repository
     }
     
-    func fetchPolitician() -> Observable<Politician> {
-        return repository.getPoliticians()
+    func fetchPolitician() -> Observable<[Politician]> {
+        return repository.getDistrictPoliticians()
     }
 }

@@ -54,7 +54,7 @@
 		B1CA9A8529630B730016EFCD /* PoliticianNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8429630B730016EFCD /* PoliticianNavigator.swift */; };
 		B1CA9A8729630B9E0016EFCD /* Policician.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8629630B9E0016EFCD /* Policician.swift */; };
 		B1CA9A8929630BB60016EFCD /* PoliticianUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8829630BB60016EFCD /* PoliticianUseCase.swift */; };
-		B1CA9A8B29630C040016EFCD /* PoliticianRepsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8A29630C040016EFCD /* PoliticianRepsitory.swift */; };
+		B1CA9A8B29630C040016EFCD /* PoliticianRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8A29630C040016EFCD /* PoliticianRepository.swift */; };
 		B1CA9A8F29630C5B0016EFCD /* PoliticianUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8E29630C5B0016EFCD /* PoliticianUseCaseProvider.swift */; };
 		B1CA9A9229632AC80016EFCD /* PoliticianSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */; };
 		B1CA9A9429632B610016EFCD /* PoliticianCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */; };
@@ -70,6 +70,8 @@
 		B1CA9AAD2963635D0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA92963635D0016EFCD /* CounterView.swift */; };
 		B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AAF296363B90016EFCD /* ComposableArchitecture */; };
 		B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AB1296363B90016EFCD /* Dependencies */; };
+		B1CA9AB4296439540016EFCD /* PoliticianDistrictRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */; };
+		B1CA9AB7296441970016EFCD /* DistrictPoliticianResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +126,7 @@
 		B1CA9A8429630B730016EFCD /* PoliticianNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianNavigator.swift; sourceTree = "<group>"; };
 		B1CA9A8629630B9E0016EFCD /* Policician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Policician.swift; sourceTree = "<group>"; };
 		B1CA9A8829630BB60016EFCD /* PoliticianUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianUseCase.swift; sourceTree = "<group>"; };
-		B1CA9A8A29630C040016EFCD /* PoliticianRepsitory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianRepsitory.swift; sourceTree = "<group>"; };
+		B1CA9A8A29630C040016EFCD /* PoliticianRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianRepository.swift; sourceTree = "<group>"; };
 		B1CA9A8E29630C5B0016EFCD /* PoliticianUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianUseCaseProvider.swift; sourceTree = "<group>"; };
 		B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianSection.swift; sourceTree = "<group>"; };
 		B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,8 @@
 		B1CA9AA72963635C0016EFCD /* MemoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoClient.swift; sourceTree = "<group>"; };
 		B1CA9AA82963635C0016EFCD /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		B1CA9AA92963635D0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianDistrictRequest.swift; sourceTree = "<group>"; };
+		B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictPoliticianResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				B18EB912295DFAC2001E08D7 /* Client */,
+				B1CA9AB529643A0B0016EFCD /* DistrictPolitician */,
 				B18EB90F295DFAC2001E08D7 /* Common */,
 			);
 			path = API;
@@ -371,7 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */,
-				B1CA9A8A29630C040016EFCD /* PoliticianRepsitory.swift */,
+				B1CA9A8A29630C040016EFCD /* PoliticianRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -488,6 +493,15 @@
 				B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */,
 			);
 			path = PoliticianMainCell;
+			sourceTree = "<group>";
+		};
+		B1CA9AB529643A0B0016EFCD /* DistrictPolitician */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */,
+				B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */,
+			);
+			path = DistrictPolitician;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,7 +643,7 @@
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
-				B1CA9A8B29630C040016EFCD /* PoliticianRepsitory.swift in Sources */,
+				B1CA9A8B29630C040016EFCD /* PoliticianRepository.swift in Sources */,
 				B1CA9A8F29630C5B0016EFCD /* PoliticianUseCaseProvider.swift in Sources */,
 				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
 				B1CA9A8329630B5A0016EFCD /* PoliticianViewModel.swift in Sources */,
@@ -638,6 +652,7 @@
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
 				B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */,
 				B1CA9AAB2963635D0016EFCD /* MemoClient.swift in Sources */,
+				B1CA9AB4296439540016EFCD /* PoliticianDistrictRequest.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
 				B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */,
@@ -655,6 +670,7 @@
 				B18EB8E1295DFA9B001E08D7 /* SceneDelegate.swift in Sources */,
 				B18EB916295DFAC2001E08D7 /* APIClient.swift in Sources */,
 				B1CA9A39295FF7970016EFCD /* UICollectionView+ReusableKit.swift in Sources */,
+				B1CA9AB7296441970016EFCD /* DistrictPoliticianResponse.swift in Sources */,
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
 				B1CA9A8729630B9E0016EFCD /* Policician.swift in Sources */,
 				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
