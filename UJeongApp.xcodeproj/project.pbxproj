@@ -71,6 +71,9 @@
 		B1CA9AB4296439540016EFCD /* PoliticianDistrictRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */; };
 		B1CA9AB7296441970016EFCD /* DistrictPoliticianResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */; };
 		B1CA9AB9296454EB0016EFCD /* LocationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB8296454EB0016EFCD /* LocationSetting.swift */; };
+		B1CA9ABB296474460016EFCD /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9ABA296474460016EFCD /* UserDefault.swift */; };
+		B1CA9ABE2964747F0016EFCD /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9ABD2964747F0016EFCD /* AppStorageManager.swift */; };
+		B1CA9AC029647E1C0016EFCD /* Gu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9ABF29647E1C0016EFCD /* Gu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,9 @@
 		B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianDistrictRequest.swift; sourceTree = "<group>"; };
 		B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictPoliticianResponse.swift; sourceTree = "<group>"; };
 		B1CA9AB8296454EB0016EFCD /* LocationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSetting.swift; sourceTree = "<group>"; };
+		B1CA9ABA296474460016EFCD /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		B1CA9ABD2964747F0016EFCD /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
+		B1CA9ABF29647E1C0016EFCD /* Gu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,8 +262,10 @@
 		B1CA9A28295FF41C0016EFCD /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				B1CA9ABD2964747F0016EFCD /* AppStorageManager.swift */,
 				B1CA9A65296169890016EFCD /* Repository */,
 				B18EB90E295DFAC2001E08D7 /* API */,
+				B1CA9ABC296474540016EFCD /* Common */,
 			);
 			path = SDK;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 			children = (
 				B1CA9A40296002FC0016EFCD /* Notice.swift */,
 				B1CA9A8629630B9E0016EFCD /* Policician.swift */,
+				B1CA9ABF29647E1C0016EFCD /* Gu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -501,6 +510,14 @@
 			path = DistrictPolitician;
 			sourceTree = "<group>";
 		};
+		B1CA9ABC296474540016EFCD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9ABA296474460016EFCD /* UserDefault.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -633,6 +650,7 @@
 				B1CA9A5F2960545C0016EFCD /* NoticeUseCase.swift in Sources */,
 				B1CA9A41296002FC0016EFCD /* Notice.swift in Sources */,
 				B18EB914295DFAC2001E08D7 /* Response.swift in Sources */,
+				B1CA9ABE2964747F0016EFCD /* AppStorageManager.swift in Sources */,
 				B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */,
 				B1CA9A8929630BB60016EFCD /* PoliticianUseCase.swift in Sources */,
 				B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */,
@@ -641,6 +659,7 @@
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
 				B1CA9A8B29630C040016EFCD /* PoliticianRepository.swift in Sources */,
+				B1CA9AC029647E1C0016EFCD /* Gu.swift in Sources */,
 				B1CA9A8F29630C5B0016EFCD /* PoliticianUseCaseProvider.swift in Sources */,
 				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
 				B1CA9A8329630B5A0016EFCD /* PoliticianViewModel.swift in Sources */,
@@ -670,6 +689,7 @@
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
 				B1CA9A8729630B9E0016EFCD /* Policician.swift in Sources */,
 				B1CA9AB9296454EB0016EFCD /* LocationSetting.swift in Sources */,
+				B1CA9ABB296474460016EFCD /* UserDefault.swift in Sources */,
 				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
 				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
