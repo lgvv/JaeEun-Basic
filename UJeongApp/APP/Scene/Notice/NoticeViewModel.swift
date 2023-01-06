@@ -32,7 +32,6 @@ final class NoticeViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
 //        let selectedPost = input.selection
-        
         let showsLocationView = input.didTapLocation
             .do(onNext: navigator.toLocationSetting)
         
