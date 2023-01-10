@@ -25,8 +25,6 @@ struct LocationSettingViewModel: ReducerProtocol {
         }
     }
     
-    
-    
     struct Environment {
         var appStorageManager = AppStorageManager()
     }

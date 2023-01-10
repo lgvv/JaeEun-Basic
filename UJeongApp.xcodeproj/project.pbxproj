@@ -207,6 +207,10 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9A712961723C0016EFCD /* APP */,
+				B1CA9A6B29616D350016EFCD /* NoticePlatform */,
+				B1CA9A8C29630C180016EFCD /* PoliticianPlatform */,
+				B1CA9A74296189F60016EFCD /* LocationSettingPlatform */,
+				B1CA9A462960095A0016EFCD /* Cells */,
 				B1CA9A64296169180016EFCD /* Core */,
 				B1CA9A28295FF41C0016EFCD /* SDK */,
 			);
@@ -248,12 +252,48 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		B19F9B7B296D4CC100F66A9F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B19F9B7C296D5E6100F66A9F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */,
+				B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */,
+				B1CA9A49296009B60016EFCD /* NoticeSection.swift */,
+				B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		B19F9B7D296D62C200F66A9F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B19F9B7E296D637500F66A9F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */,
+				B1CA9A8229630B5A0016EFCD /* PoliticianViewModel.swift */,
+				B1CA9A8429630B730016EFCD /* PoliticianNavigator.swift */,
+				B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		B1CA9A27295FF40F0016EFCD /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				B1CA9A25295FF4050016EFCD /* ViewModelType.swift */,
-				B1CA9A4D296018690016EFCD /* BaseArchitecture */,
-				B1CA9A4E2960187E0016EFCD /* BaseLayout */,
 				B1CA9A8129630A550016EFCD /* Templete */,
 			);
 			path = Common;
@@ -263,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				B1CA9ABD2964747F0016EFCD /* AppStorageManager.swift */,
-				B1CA9A65296169890016EFCD /* Repository */,
 				B18EB90E295DFAC2001E08D7 /* API */,
 				B1CA9ABC296474540016EFCD /* Common */,
 			);
@@ -278,17 +317,6 @@
 				B18EB8EC295DFA9C001E08D7 /* Info.plist */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		B1CA9A2A295FF6970016EFCD /* Notice */ = {
-			isa = PBXGroup;
-			children = (
-				B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */,
-				B1CA9A622960A25E0016EFCD /* NoticeViewModel.swift */,
-				B1CA9A49296009B60016EFCD /* NoticeSection.swift */,
-				B1CA9A602960A24E0016EFCD /* NoticeNavigator.swift */,
-			);
-			path = Notice;
 			sourceTree = "<group>";
 		};
 		B1CA9A30295FF7970016EFCD /* ThirdParty */ = {
@@ -340,25 +368,6 @@
 			path = BaseArchitecture;
 			sourceTree = "<group>";
 		};
-		B1CA9A4E2960187E0016EFCD /* BaseLayout */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */,
-			);
-			path = BaseLayout;
-			sourceTree = "<group>";
-		};
-		B1CA9A4F296025060016EFCD /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A2A295FF6970016EFCD /* Notice */,
-				B1CA9A7E2962FB1D0016EFCD /* Politician */,
-				B1CA9A462960095A0016EFCD /* Cells */,
-				B1CA9A74296189F60016EFCD /* LocationSetting */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
 		B1CA9A542960298C0016EFCD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +382,9 @@
 		B1CA9A64296169180016EFCD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B1CA9A542960298C0016EFCD /* Extension */,
+				B1CA9A27295FF40F0016EFCD /* Common */,
+				B1CA9A4D296018690016EFCD /* BaseArchitecture */,
 				B1CA9A432960030C0016EFCD /* Models */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
@@ -382,7 +394,6 @@
 		B1CA9A65296169890016EFCD /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A5C29603F060016EFCD /* NoticeRepository.swift */,
 				B1CA9A8A29630C040016EFCD /* PoliticianRepository.swift */,
 			);
 			path = Repository;
@@ -397,12 +408,14 @@
 			path = Notice;
 			sourceTree = "<group>";
 		};
-		B1CA9A6B29616D350016EFCD /* Notice */ = {
+		B1CA9A6B29616D350016EFCD /* NoticePlatform */ = {
 			isa = PBXGroup;
 			children = (
+				B19F9B7C296D5E6100F66A9F /* Scene */,
 				B1CA9A6D29616D8B0016EFCD /* UseCases */,
+				B19F9B7D296D62C200F66A9F /* Repository */,
 			);
-			path = Notice;
+			path = NoticePlatform;
 			sourceTree = "<group>";
 		};
 		B1CA9A6D29616D8B0016EFCD /* UseCases */ = {
@@ -420,34 +433,20 @@
 				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
 				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
 				B1CA9A6729616A290016EFCD /* Application.swift */,
-				B1CA9A4F296025060016EFCD /* Scene */,
-				B1CA9A8D29630C330016EFCD /* Platform */,
-				B1CA9A27295FF40F0016EFCD /* Common */,
-				B1CA9A542960298C0016EFCD /* Extension */,
+				B19F9B7B296D4CC100F66A9F /* Utils */,
 				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
 			);
 			path = APP;
 			sourceTree = "<group>";
 		};
-		B1CA9A74296189F60016EFCD /* LocationSetting */ = {
+		B1CA9A74296189F60016EFCD /* LocationSettingPlatform */ = {
 			isa = PBXGroup;
 			children = (
 				B1CA9AA92963635D0016EFCD /* CounterView.swift */,
 				B1CA9AA62963635C0016EFCD /* MemoView.swift */,
 				B1CA9AB8296454EB0016EFCD /* LocationSetting.swift */,
 			);
-			path = LocationSetting;
-			sourceTree = "<group>";
-		};
-		B1CA9A7E2962FB1D0016EFCD /* Politician */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */,
-				B1CA9A8229630B5A0016EFCD /* PoliticianViewModel.swift */,
-				B1CA9A8429630B730016EFCD /* PoliticianNavigator.swift */,
-				B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */,
-			);
-			path = Politician;
+			path = LocationSettingPlatform;
 			sourceTree = "<group>";
 		};
 		B1CA9A8129630A550016EFCD /* Templete */ = {
@@ -458,21 +457,14 @@
 			path = Templete;
 			sourceTree = "<group>";
 		};
-		B1CA9A8C29630C180016EFCD /* Politician */ = {
+		B1CA9A8C29630C180016EFCD /* PoliticianPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				B19F9B7E296D637500F66A9F /* Scene */,
 				B1CA9A9029630C6A0016EFCD /* UseCases */,
+				B1CA9A65296169890016EFCD /* Repository */,
 			);
-			path = Politician;
-			sourceTree = "<group>";
-		};
-		B1CA9A8D29630C330016EFCD /* Platform */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A6B29616D350016EFCD /* Notice */,
-				B1CA9A8C29630C180016EFCD /* Politician */,
-			);
-			path = Platform;
+			path = PoliticianPlatform;
 			sourceTree = "<group>";
 		};
 		B1CA9A9029630C6A0016EFCD /* UseCases */ = {
