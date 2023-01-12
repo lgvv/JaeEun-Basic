@@ -215,7 +215,7 @@
 				B1CA9A8C29630C180016EFCD /* PoliticianPlatform */,
 				B1CA9A74296189F60016EFCD /* LocationSettingPlatform */,
 				B1CA9A462960095A0016EFCD /* Cells */,
-				B1CA9A64296169180016EFCD /* Core */,
+				B1CA9A64296169180016EFCD /* CoreModule */,
 				B1CA9A28295FF41C0016EFCD /* SDK */,
 			);
 			path = UJeongApp;
@@ -393,7 +393,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B1CA9A64296169180016EFCD /* Core */ = {
+		B1CA9A64296169180016EFCD /* CoreModule */ = {
 			isa = PBXGroup;
 			children = (
 				B1CA9A542960298C0016EFCD /* Extension */,
@@ -402,7 +402,7 @@
 				B1CA9A432960030C0016EFCD /* Models */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
 			);
-			path = Core;
+			path = CoreModule;
 			sourceTree = "<group>";
 		};
 		B1CA9A65296169890016EFCD /* Repository */ = {

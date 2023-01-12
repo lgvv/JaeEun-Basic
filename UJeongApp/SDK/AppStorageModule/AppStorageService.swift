@@ -13,11 +13,11 @@ protocol AppStorageServiceProtocol {
 }
 
 class AppStorageService: AppStorageServiceProtocol {
-    @AppStorage(UserDefaultKey.selectedLocation)
+    @AppStorage(AppStorageKey.selectedLocation)
     var selectedLocation: String = Gu.강남구.rawValue
 }
 
-class UserDefaultKey {
+class AppStorageKey {
     private static let baseString = "com.ujeong.world"
 
     static let selectedLocation: String = "\(baseString).selected.location"
