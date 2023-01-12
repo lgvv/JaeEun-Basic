@@ -36,10 +36,11 @@ class DefaultNoticeNavigator: NoticeNavigator {
     func toNoticeDetail() { }
     
     func toLocationSetting() {
-//        let view = LocationSettingView()
-//        let vc = UIHostingController(rootView: view)
-//        
-//        navigationController.present(vc, animated: true, completion: nil)
+        let reducer: LocationSettingReducer = LocationSettingReducer()
+        let view = LocationSettingView(reducer: reducer)
+        let vc = UIHostingController(rootView: view)
+        
+        navigationController.present(vc, animated: true, completion: nil)
     }
 }
 

@@ -18,16 +18,17 @@ enum LocationSettingAction: Equatable {
     case didTapItem(_ item: String)
 }
 
-
-
 struct LocationSettingEnvironment {
-//    var appStorageManager = AppStorageManager()
+    var userDefaultService: AppStorageServiceProtocol = AppStorageService()
 }
+
+
 
 // MARK: - LocationSettingView
 
 struct LocationSettingView: View {
-    let store: Store<LocationSettingState, LocationSettingAction>
+//    let store: Store<LocationSettingState, LocationSettingAction>
+    let reducer: LocationSettingReducer
     
     var body: some View {
         List {
@@ -61,6 +62,26 @@ struct LocationGridView: View {
             }
         }
     }
+}
+
+struct LocationSettingReducer: ReducerProtocol {
+    struct State {
+        var selectedItem = ""
+    }
+
+    enum Action {
+        case itemSelected
+    }
+
+    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+        switch action {
+        case .itemSelected:
+            state.selectedItem
+            return Effect.none
+        }
+    }
+
+    private let sdkService = UJeongSDKService()
 }
 
 //struct TempSetting_Previews: PreviewProvider {
