@@ -294,12 +294,13 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		B19F9B81296FE37D00F66A9F /* AppStorageModule */ = {
+		B19F9B81296FE37D00F66A9F /* UserDefaultModule */ = {
 			isa = PBXGroup;
 			children = (
 				B19F9B82296FE39400F66A9F /* AppStorageService.swift */,
+				B1CA9ABA296474460016EFCD /* UserDefault.swift */,
 			);
-			path = AppStorageModule;
+			path = UserDefaultModule;
 			sourceTree = "<group>";
 		};
 		B1CA9A27295FF40F0016EFCD /* Common */ = {
@@ -316,9 +317,8 @@
 			children = (
 				B19F9B84296FE54100F66A9F /* UJeongSDK.swift */,
 				B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */,
-				B19F9B81296FE37D00F66A9F /* AppStorageModule */,
+				B19F9B81296FE37D00F66A9F /* UserDefaultModule */,
 				B18EB90E295DFAC2001E08D7 /* NetworkModule */,
-				B1CA9ABC296474540016EFCD /* Common */,
 			);
 			path = SDKModule;
 			sourceTree = "<group>";
@@ -514,14 +514,6 @@
 				B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */,
 			);
 			path = DistrictPolitician;
-			sourceTree = "<group>";
-		};
-		B1CA9ABC296474540016EFCD /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9ABA296474460016EFCD /* UserDefault.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
