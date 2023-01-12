@@ -216,7 +216,7 @@
 				B1CA9A74296189F60016EFCD /* LocationSettingPlatform */,
 				B1CA9A462960095A0016EFCD /* Cells */,
 				B1CA9A64296169180016EFCD /* CoreModule */,
-				B1CA9A28295FF41C0016EFCD /* SDK */,
+				B1CA9A28295FF41C0016EFCD /* SDKModule */,
 			);
 			path = UJeongApp;
 			sourceTree = "<group>";
@@ -311,7 +311,7 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		B1CA9A28295FF41C0016EFCD /* SDK */ = {
+		B1CA9A28295FF41C0016EFCD /* SDKModule */ = {
 			isa = PBXGroup;
 			children = (
 				B19F9B84296FE54100F66A9F /* UJeongSDK.swift */,
@@ -320,7 +320,7 @@
 				B18EB90E295DFAC2001E08D7 /* NetworkModule */,
 				B1CA9ABC296474540016EFCD /* Common */,
 			);
-			path = SDK;
+			path = SDKModule;
 			sourceTree = "<group>";
 		};
 		B1CA9A29295FF4280016EFCD /* SupportingFiles */ = {
