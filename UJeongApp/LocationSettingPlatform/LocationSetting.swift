@@ -8,46 +8,26 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct LocationSettingViewModel: ReducerProtocol {
-    struct State: Equatable {
-        var selectedItem = ""
-    }
+// MARK: - LocationSettingCore
 
-    enum Action: Equatable {
-        case didTapItem(_ item: String)
-    }
-    
-    func reduce(into state: inout State, action: Action) -> ComposableArchitecture.EffectTask<Action> {
-        switch action {
-        case .didTapItem(let item):
-            state.selectedItem = item
-            return EffectTask.none
-        }
-    }
-    
-    struct Environment {
-        var appStorageManager = AppStorageManager()
-    }
-    
-//    struct Environment {
-//        var appStorageManager = AppStorageManager()
-//    }
-//
-//    let reducer = Reducer<State, Action, Environment> { state, action, env in
-//
-//        switch action {
-//        case .selection(let name):
-//            state.selectedLocation = name
-//
-//            return Effect.none
-//        }
-//    }
+struct LocationSettingState {
+    var selectedItem = ""
+}
+
+enum LocationSettingAction: Equatable {
+    case didTapItem(_ item: String)
 }
 
 
+
+struct LocationSettingEnvironment {
+//    var appStorageManager = AppStorageManager()
+}
+
+// MARK: - LocationSettingView
+
 struct LocationSettingView: View {
-    typealias ViewModel = LocationSettingViewModel
-    let store: Store<ViewModel.State, ViewModel.Action>
+    let store: Store<LocationSettingState, LocationSettingAction>
     
     var body: some View {
         List {
