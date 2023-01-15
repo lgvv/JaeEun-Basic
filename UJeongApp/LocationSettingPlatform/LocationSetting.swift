@@ -43,22 +43,8 @@ struct LocationSettingView: View {
             observe: ViewState.init,
             send: ViewModel.Action.init
         ) { viewStore in
-
-            List(viewStore.allLocation["서울특별시"]!, id: \.self, selection: $multiSelection) {
-                Text($0)
-            }
             
-//            _ = viewStore.allLocation.forEach { key, value in
-//                List {
-//                    Section {
-//                        Text("A")
-//                    } header: {
-//                        Text("\(key)")
-//                    }
-//                }
-//            }
-            
-            List {
+            List(selection: $multiSelection) {
                 Section {
                     LocationGridView()
                 } header: {
@@ -67,6 +53,8 @@ struct LocationSettingView: View {
             }
             .navigationTitle("List Style")
             .listStyle(.sidebar)
+            
+            Text("\(multiSelection.count) selections")
         }
     }
 }
