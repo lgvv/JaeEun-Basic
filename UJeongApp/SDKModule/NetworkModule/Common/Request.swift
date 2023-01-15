@@ -14,7 +14,7 @@ protocol Request {
 }
 
 protocol Respondable {
-    associatedtype ResponseType: Response
+    associatedtype ResponseType: Decodable
 }
 
 protocol OnlyRequestable {

@@ -38,7 +38,6 @@ final class APIClient {
         case statusCode(_ statusCode: Int)
     }
     
-    private(set) var apiKey: String?
     let baseURL: URL
     
     init(urlString: String = APIClient.urlString) {
@@ -107,7 +106,7 @@ final class APIClient {
         .resume()
     }
     
-    func fetchWithRx<RequestType: Request & Respondable>(_ request: RequestType) -> Observable<RequestType.ResponseType> {
+    func sendWithRx<RequestType: Request & Respondable>(_ request: RequestType) -> Observable<RequestType.ResponseType> {
         return Observable.create { emitter in
             self.send(request) { result in
                 switch result {
@@ -120,5 +119,66 @@ final class APIClient {
             }
             return Disposables.create()
         }
+    }
+}
+
+struct SearchInfomation: Codable {
+    let totalCount: Int?
+    let incompleteResults: Bool?
+    let items: [Repository]
+    
+    enum CodingKeys: String, CodingKey {
+        case totalCount = "total_count"
+        case incompleteResults = "incomplete_results"
+        case items
+    }
+}
+
+struct Repository: Codable, Equatable {
+    let name: String?
+    let itemDescription: String?
+    let owner: Owner
+    var stargazersCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case itemDescription = "description"
+        case owner
+        case stargazersCount = "stargazers_count"
+    }
+}
+
+struct Owner: Codable, Equatable {
+    var login: String? // owner
+    var name: String? // 이름
+    var avatarURL: String? // 이미지url
+    
+    enum CodingKeys: String, CodingKey {
+        case name, login
+        case avatarURL = "avatar_url"
+    }
+}
+
+struct SearchRequest: Request, Respondable {
+    typealias ResponseType = SearchInfomation
+    
+    let method: APIClient.Method = .get
+    let q: String
+    let page: Int
+    
+    var key: String { "search/repositories" }
+    
+    func urlRequst(baseURL: URL) -> URLRequest? {
+        guard let url = URL(string: "\(baseURL)/\(key)?q=\(q)&page=\(page)") else {
+            return nil
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = method.stringValue
+        
+        urlRequest.addValue("application/vnd.github+json",
+                            forHTTPHeaderField: "Accept")
+        
+        return urlRequest
     }
 }

@@ -17,8 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = NoticeViewController()
+        Application.shard.configureMainInterface(in: window)
         window?.makeKeyAndVisible()
     }
 }
-
