@@ -10,6 +10,19 @@ import ComposableArchitecture
 
 // MARK: - LocationSettingView
 
+struct LocationSection: Identifiable {
+    let id = UUID()
+    
+    let location: Location
+
+    static func allSection() -> [LocationSection] {
+        let seoul = LocationSection(location: .init(city: "서울특별시",
+                                                    districts: Gu.allCases.map { $0.rawValue }.sorted(by: <)))
+        
+        return [seoul]
+    }
+}
+
 struct LocationSettingView: View {
     typealias ViewModel = LocationSettingReducer
     
@@ -17,10 +30,8 @@ struct LocationSettingView: View {
     
     struct ViewState: Equatable {
         var selectedItem: String
-        var allLocation: [String: [String]]
         
         init(state: ViewModel.State) {
-            self.allLocation = state.allLocation
             self.selectedItem = state.selectedItem
         }
     }
@@ -33,16 +44,31 @@ struct LocationSettingView: View {
         self.store = store
     }
     
-    
     @State private var multiSelection = Set<UUID>() {
         didSet { print("\(multiSelection)") }
     }
+    
+    let columns = [GridItem(.flexible()),
+                   GridItem(.flexible()),
+                   GridItem(.flexible())]
+    
     var body: some View {
         WithViewStore(
             self.store,
             observe: ViewState.init,
             send: ViewModel.Action.init
         ) { viewStore in
+            
+//            ScrollView {
+//                LazyVGrid(columns: columns,
+//                          alignment: .center,
+//                          spacing: .none,
+//                          pinnedViews: []) {
+//                    ForEach(viewStore.allLocation, id: \.self) { i in
+//                        Text("i")
+//                    }
+//                }
+//            }
             
             List(selection: $multiSelection) {
                 Section {
@@ -82,8 +108,6 @@ struct LocationGridView: View {
 
 struct LocationSettingReducer: ReducerProtocol {
     struct State {
-        let allLocation = Location.allLocation()
-        
         var selectedItem = ""
     }
     
@@ -107,6 +131,7 @@ struct LocationSettingReducer: ReducerProtocol {
         }
     }
     
+    // NOTE: - Dependency
     private let sdkService = UJeongSDKService()
     
 }
