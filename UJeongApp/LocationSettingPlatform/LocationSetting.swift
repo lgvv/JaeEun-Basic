@@ -59,16 +59,25 @@ struct LocationSettingView: View {
             send: ViewModel.Action.init
         ) { viewStore in
             
-//            ScrollView {
-//                LazyVGrid(columns: columns,
-//                          alignment: .center,
-//                          spacing: .none,
-//                          pinnedViews: []) {
-//                    ForEach(viewStore.allLocation, id: \.self) { i in
-//                        Text("i")
-//                    }
-//                }
-//            }
+            ScrollView {
+                LazyVGrid(columns: columns,
+                          alignment: .center,
+                          spacing: .none,
+                          pinnedViews: []) {
+                    ForEach(LocationSection.allSection()) { section in
+                        Section(content: {
+                            ForEach(section.location.districts, id: \.self) {
+                                Text($0)
+                                    .padding(.horizontal, 5)
+                                    .padding(.vertical, 10)
+                                    .border(Color.blue)
+                            }
+                        }, header: {
+                            Text(section.location.city)
+                        })
+                    }
+                }
+            }
             
             List(selection: $multiSelection) {
                 Section {
