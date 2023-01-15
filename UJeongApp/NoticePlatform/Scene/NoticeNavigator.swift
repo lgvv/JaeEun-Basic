@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import ComposableArchitecture
 
 protocol NoticeNavigator {
     func toNotice()
@@ -36,8 +37,8 @@ class DefaultNoticeNavigator: NoticeNavigator {
     func toNoticeDetail() { }
     
     func toLocationSetting() {
-        let reducer: LocationSettingReducer = LocationSettingReducer()
-        let view = LocationSettingView(reducer: reducer)
+        let view = LocationSettingView(store: StoreOf<LocationSettingView.ViewModel>(initialState: .init(), reducer: LocationSettingReducer()))
+//        let view = LocationSettingView(store: )
         let vc = UIHostingController(rootView: view)
         
         navigationController.present(vc, animated: true, completion: nil)

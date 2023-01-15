@@ -1,4 +1,4 @@
-//  https://pointfreeco.github.io/swift-composable-architecture/main/documentation/composablearchitecture/reducerprotocol/
+//
 //  LocationSetting.swift
 //  UJeongApp
 //
@@ -8,38 +8,66 @@
 import SwiftUI
 import ComposableArchitecture
 
-// MARK: - LocationSettingCore
-
-struct LocationSettingState {
-    var selectedItem = ""
-}
-
-enum LocationSettingAction: Equatable {
-    case didTapItem(_ item: String)
-}
-
-struct LocationSettingEnvironment {
-    var userDefaultService: AppStorageServiceProtocol = AppStorageService()
-}
-
-
-
 // MARK: - LocationSettingView
 
 struct LocationSettingView: View {
-//    let store: Store<LocationSettingState, LocationSettingAction>
-    let reducer: LocationSettingReducer
+    typealias ViewModel = LocationSettingReducer
     
-    var body: some View {
-        List {
-            Section {
-                LocationGridView()
-            } header: {
-                Text("서울특별시")
-            }
+    let store: StoreOf<ViewModel>
+    
+    struct ViewState: Equatable {
+        var selectedItem: String
+        var allLocation: [String: [String]]
+        
+        init(state: ViewModel.State) {
+            self.allLocation = state.allLocation
+            self.selectedItem = state.selectedItem
         }
-        .navigationTitle("List Style")
-        .listStyle(.sidebar)
+    }
+    
+    enum ViewAction {
+        case itemSelected
+    }
+    
+    init(store: StoreOf<ViewModel>) {
+        self.store = store
+    }
+    
+    
+    @State private var multiSelection = Set<UUID>() {
+        didSet { print("\(multiSelection)") }
+    }
+    var body: some View {
+        WithViewStore(
+            self.store,
+            observe: ViewState.init,
+            send: ViewModel.Action.init
+        ) { viewStore in
+
+            List(viewStore.allLocation["서울특별시"]!, id: \.self, selection: $multiSelection) {
+                Text($0)
+            }
+            
+//            _ = viewStore.allLocation.forEach { key, value in
+//                List {
+//                    Section {
+//                        Text("A")
+//                    } header: {
+//                        Text("\(key)")
+//                    }
+//                }
+//            }
+            
+            List {
+                Section {
+                    LocationGridView()
+                } header: {
+                    Text("서울특별시")
+                }
+            }
+            .navigationTitle("List Style")
+            .listStyle(.sidebar)
+        }
     }
 }
 
@@ -47,17 +75,21 @@ struct LocationGridView: View {
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
                    GridItem(.flexible())]
-
+    
     private let locationGus = Gu.allCases.map { $0.rawValue }.sorted(by: <)
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 
                 ForEach(locationGus, id: \.self) { value in
-                    Text("\(value)")
-                        .padding(.horizontal, 5)
-                        .padding(.vertical, 10)
-                        .border(Color.blue)
+                    Button("\(value)", action: {
+//                        viewStore.send(.fetchItem(aMemo.id), animation: .default)
+                    })
+//
+//                    Text("\(value)")
+//                        .padding(.horizontal, 5)
+//                        .padding(.vertical, 10)
+//                        .border(Color.blue)
                 }
             }
         }
@@ -66,29 +98,40 @@ struct LocationGridView: View {
 
 struct LocationSettingReducer: ReducerProtocol {
     struct State {
+        let allLocation = Location.allLocation()
+        
         var selectedItem = ""
     }
-
+    
     enum Action {
         case itemSelected
-    }
-
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        case .itemSelected:
-            state.selectedItem
-            return Effect.none
+        
+        init(action: LocationSettingView.ViewAction) {
+            switch action {
+            case .itemSelected: self = .itemSelected
+            }
         }
     }
-
+    
+    // NOTE: - func reduce랑 동일
+    var body: some ReducerProtocol<State, Action> {
+        Reduce { state, action in
+            switch action {
+            case .itemSelected:
+                return .none
+            }
+        }
+    }
+    
     private let sdkService = UJeongSDKService()
+    
 }
 
 //struct TempSetting_Previews: PreviewProvider {
-////    typealias ViewModel = LocationSettingViewModel
-//    static let store: Store<LocationSettingViewModel.State, LocationSettingViewModel.Action>
+//    static let reducer: LocationSettingReducer = LocationSettingReducer()
+//
 //
 //    static var previews: some View {
-//        LocationSettingView(store: store)
+//        LocationSettingView(reducer: reducer)
 //    }
 //}
