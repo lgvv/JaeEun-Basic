@@ -70,14 +70,10 @@ struct LocationGridView: View {
             LazyVGrid(columns: columns) {
                 
                 ForEach(locationGus, id: \.self) { value in
-                    Button("\(value)", action: {
-//                        viewStore.send(.fetchItem(aMemo.id), animation: .default)
-                    })
-//
-//                    Text("\(value)")
-//                        .padding(.horizontal, 5)
-//                        .padding(.vertical, 10)
-//                        .border(Color.blue)
+                    Text("\(value)")
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 10)
+                        .border(Color.blue)
                 }
             }
         }
