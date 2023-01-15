@@ -79,6 +79,28 @@ struct LocationSettingView: View {
                 }
             }
             
+            ForEach(LocationSection.allSection()) { section in
+                List {
+                    Section {
+                        LazyVGrid(columns: columns,
+                                  alignment: .center,
+                                  spacing: .none,
+                                  pinnedViews: []) {
+                            ForEach(section.location.districts, id: \.self) {
+                                Text($0)
+                                    .padding(.horizontal, 5)
+                                    .padding(.vertical, 10)
+                                    .border(Color.blue)
+                            }
+                        }
+                    } header: {
+                        Text(section.location.city)
+                    }
+                }
+                .listStyle(.sidebar)
+            }
+            
+            
             List(selection: $multiSelection) {
                 Section {
                     LocationGridView()
