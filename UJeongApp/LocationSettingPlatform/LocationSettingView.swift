@@ -71,7 +71,6 @@ struct LocationSettingView: View {
             }
             .onAppear {
                 viewStore.send(.onAppear)
-                print("😊")
             }
         }
     }
