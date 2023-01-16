@@ -50,11 +50,8 @@ struct LocationSettingView: View {
                    GridItem(.flexible())]
     
     var body: some View {
-        WithViewStore(
-            self.store,
-            observe: ViewState.init,
-            send: ViewModel.Action.init
-        ) { viewStore in
+        WithViewStore(self.store.scope(state: \.selectedLocation)) {
+            viewStore in
             ForEach(LocationSection.allSection()) { section in
                 List {
                     Section {
@@ -70,7 +67,7 @@ struct LocationSettingView: View {
                                     .padding(.horizontal, 5)
                                     .padding(.vertical, 5)
                                     .overlay {
-                                        if location == viewStore.state.selectedLocation {
+                                        if location == viewStore.state {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .stroke(Color.black, lineWidth: 3)
                                         }
@@ -85,11 +82,54 @@ struct LocationSettingView: View {
                     }
                 }
                 .listStyle(.sidebar)
-                .onAppear {
-                    // 이게 두번 호출되는 이유는 store의 scope의 문제로 의심됩니다.
-                    viewStore.send(.onAppear)
-                    print("😊")
-                }
+        }
+            .onAppear {
+                viewStore.send(.onAppear)
+                print("😊")
+            }
+        
+        
+        WithViewStore(
+            self.store,
+            observe: ViewState.init,
+            send: ViewModel.Action.init
+        ) { viewStore in
+
+//            ForEach(LocationSection.allSection()) { section in
+//                List {
+//                    Section {
+//                        LazyVGrid(
+//                            columns: columns,
+//                            alignment: .center,
+//                            spacing: .none,
+//                            pinnedViews: []
+//                        ) {
+//                            ForEach(section.location.districts, id: \.self) { location in
+//
+//                                Text(location)
+//                                    .padding(.horizontal, 5)
+//                                    .padding(.vertical, 5)
+//                                    .overlay {
+//                                        if location == viewStore.state.selectedLocation {
+//                                            RoundedRectangle(cornerRadius: 10)
+//                                                .stroke(Color.black, lineWidth: 3)
+//                                        }
+//                                    }
+//                                    .onTapGesture {
+//                                        viewStore.send(.itemSelected(location: location))
+//                                    }
+//                            }
+//                        }
+//                    } header: {
+//                        Text(section.location.city)
+//                    }
+//                }
+//                .listStyle(.sidebar)
+//                .onAppear {
+//                    // 이게 두번 호출되는 이유는 store의 scope의 문제로 의심됩니다.
+//                    viewStore.send(.onAppear)
+//                    print("😊")
+//                }
             }
         }
     }
