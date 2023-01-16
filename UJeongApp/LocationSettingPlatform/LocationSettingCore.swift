@@ -42,6 +42,7 @@ struct LocationSettingCore: ReducerProtocol {
                 return EffectTask<Action>(value: .updateAppStorage)
             case .updateAppStorage:
                 // db에 데이터 저장하기
+                jjs.selectedLocation = state.selectedLocation
                 
                 sdkService.selectedLocation = state.selectedLocation
                 print("나도 불립니다! \(sdkService.selectedLocation)")
@@ -53,4 +54,19 @@ struct LocationSettingCore: ReducerProtocol {
     // NOTE: - Dependency
     // live쪽을 살펴보기
     private let sdkService = UJeongSDKService()
+    @Dependency(\.sdkService) var jjs
+    
+}
+
+extension UJeongSDKServiceInTCA: DependencyKey {
+    public static let liveValue: UJeongSDKServiceInTCA = Self(
+        selectedLocation: ""
+    )
+}
+
+extension DependencyValues {
+    var sdkService: UJeongSDKServiceInTCA {
+        get { self[UJeongSDKServiceInTCA.self] }
+        set { self[UJeongSDKServiceInTCA.self] = newValue }
+    }
 }
