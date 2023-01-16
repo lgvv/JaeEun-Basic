@@ -86,6 +86,7 @@ struct LocationSettingView: View {
                 }
                 .listStyle(.sidebar)
                 .onAppear {
+                    viewStore.send(.onAppear)
                     print("😊")
                 }
             }
@@ -124,11 +125,12 @@ struct LocationSettingReducer: ReducerProtocol {
             case let .itemSelected(location):
                 state.selectedLocation = location
                 print("location은 \(location)입니다.")
-                return EffectTask.concatenate([
-                    EffectTask<Action>(value: .updateAppStorage)
-                ])
+                return EffectTask<Action>(value: .updateAppStorage)
             case .updateAppStorage:
-                print("일단 나도 불리긴 불립니다용")
+                // db에 데이터 저장하기
+                
+                sdkService.selectedLocation = state.selectedLocation
+                print("나도 불립니다! \(sdkService.selectedLocation)")
                 return .none
             }
         }
