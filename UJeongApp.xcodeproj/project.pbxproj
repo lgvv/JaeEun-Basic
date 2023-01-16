@@ -76,6 +76,7 @@
 		B1DB001B29754933006A84BD /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001A29754933006A84BD /* FlexLayoutYoga */; };
 		B1DB001D29754933006A84BD /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001C29754933006A84BD /* FlexLayoutYogaKit */; };
 		B1DB00202975493D006A84BD /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001F2975493D006A84BD /* PinLayout */; };
+		B1DB002229755CD5006A84BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB002129755CD5006A84BD /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		B1CA9ABF29647E1C0016EFCD /* Gu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gu.swift; sourceTree = "<group>"; };
 		B1DB001029753278006A84BD /* LocationSettingCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingCore.swift; sourceTree = "<group>"; };
 		B1DB00122975329F006A84BD /* LocationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSection.swift; sourceTree = "<group>"; };
+		B1DB002129755CD5006A84BD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 				B1CA9A40296002FC0016EFCD /* Notice.swift */,
 				B1CA9A8629630B9E0016EFCD /* Policician.swift */,
 				B1CA9ABF29647E1C0016EFCD /* Gu.swift */,
+				B1DB002129755CD5006A84BD /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */,
 				B1CA9A8929630BB60016EFCD /* PoliticianUseCase.swift in Sources */,
 				B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */,
+				B1DB002229755CD5006A84BD /* Location.swift in Sources */,
 				B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */,
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
 				B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */,
