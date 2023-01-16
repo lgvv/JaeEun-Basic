@@ -37,15 +37,11 @@ struct LocationSettingView: View {
     }
     
     enum ViewAction {
-        case itemSelected
+        case itemSelected(location: String)
     }
     
     init(store: StoreOf<ViewModel>) {
         self.store = store
-    }
-    
-    @State private var multiSelection = Set<UUID>() {
-        didSet { print("\(multiSelection)") }
     }
     
     let columns = [GridItem(.flexible()),
@@ -74,6 +70,7 @@ struct LocationSettingView: View {
                                     .border(Color.blue)
                                     .onTapGesture {
                                         print("hello \(location)")
+                                        viewStore.send(.itemSelected(location: location))
                                     }
                                 
                             }
@@ -94,11 +91,12 @@ struct LocationSettingReducer: ReducerProtocol {
     }
     
     enum Action {
-        case itemSelected
+        case itemSelected(location: String)
         
         init(action: LocationSettingView.ViewAction) {
             switch action {
-            case .itemSelected: self = .itemSelected
+            case let .itemSelected(location):
+                self = .itemSelected(location: location)
             }
         }
     }
@@ -107,7 +105,8 @@ struct LocationSettingReducer: ReducerProtocol {
     var body: some ReducerProtocol<State, Action> {
         Reduce { state, action in
             switch action {
-            case .itemSelected:
+            case let .itemSelected(location):
+                print("location은 \(location)입니다.")
                 return .none
             }
         }
