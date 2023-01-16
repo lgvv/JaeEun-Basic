@@ -14,7 +14,7 @@ struct LocationSection: Identifiable {
     let id = UUID()
     
     let location: Location
-
+    
     static func allSection() -> [LocationSection] {
         let seoul = LocationSection(location: .init(city: "서울특별시",
                                                     districts: Gu.allCases.map { $0.rawValue }.sorted(by: <)))
@@ -58,39 +58,24 @@ struct LocationSettingView: View {
             observe: ViewState.init,
             send: ViewModel.Action.init
         ) { viewStore in
-            
-            ScrollView {
-                LazyVGrid(columns: columns,
-                          alignment: .center,
-                          spacing: .none,
-                          pinnedViews: []) {
-                    ForEach(LocationSection.allSection()) { section in
-                        Section(content: {
-                            ForEach(section.location.districts, id: \.self) {
-                                Text($0)
-                                    .padding(.horizontal, 5)
-                                    .padding(.vertical, 10)
-                                    .border(Color.blue)
-                            }
-                        }, header: {
-                            Text(section.location.city)
-                        })
-                    }
-                }
-            }
-            
             ForEach(LocationSection.allSection()) { section in
                 List {
                     Section {
-                        LazyVGrid(columns: columns,
-                                  alignment: .center,
-                                  spacing: .none,
-                                  pinnedViews: []) {
-                            ForEach(section.location.districts, id: \.self) {
-                                Text($0)
+                        LazyVGrid(
+                            columns: columns,
+                            alignment: .center,
+                            spacing: .none,
+                            pinnedViews: []
+                        ) {
+                            ForEach(section.location.districts, id: \.self) { location in
+                                Text(location)
                                     .padding(.horizontal, 5)
                                     .padding(.vertical, 10)
                                     .border(Color.blue)
+                                    .onTapGesture {
+                                        print("hello \(location)")
+                                    }
+                                
                             }
                         }
                     } header: {
@@ -98,40 +83,6 @@ struct LocationSettingView: View {
                     }
                 }
                 .listStyle(.sidebar)
-            }
-            
-            
-            List(selection: $multiSelection) {
-                Section {
-                    LocationGridView()
-                } header: {
-                    Text("서울특별시")
-                }
-            }
-            .navigationTitle("List Style")
-            .listStyle(.sidebar)
-            
-            Text("\(multiSelection.count) selections")
-        }
-    }
-}
-
-struct LocationGridView: View {
-    let columns = [GridItem(.flexible()),
-                   GridItem(.flexible()),
-                   GridItem(.flexible())]
-    
-    private let locationGus = Gu.allCases.map { $0.rawValue }.sorted(by: <)
-    var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns) {
-                
-                ForEach(locationGus, id: \.self) { value in
-                    Text("\(value)")
-                        .padding(.horizontal, 5)
-                        .padding(.vertical, 10)
-                        .border(Color.blue)
-                }
             }
         }
     }
