@@ -86,6 +86,7 @@ struct LocationSettingView: View {
                 }
                 .listStyle(.sidebar)
                 .onAppear {
+                    // 이게 두번 호출되는 이유는 store의 scope의 문제로 의심됩니다.
                     viewStore.send(.onAppear)
                     print("😊")
                 }
@@ -137,6 +138,7 @@ struct LocationSettingReducer: ReducerProtocol {
     }
     
     // NOTE: - Dependency
+    // live쪽을 살펴보기
     private let sdkService = UJeongSDKService()
     
 }
