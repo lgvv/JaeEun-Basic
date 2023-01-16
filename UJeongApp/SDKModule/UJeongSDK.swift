@@ -7,9 +7,13 @@
 
 import Foundation
 
+protocol UJeongSDKServiceProtocol {
+    var selectedLocation: String { get set }
+}
+
 // Interface의 역할
 
-public class UJeongSDKService {
+public class UJeongSDKService: UJeongSDKServiceProtocol {
     private let main: UJeongMain = {
         // 마이그레이션 작업 가능.
         return UJeongMain()

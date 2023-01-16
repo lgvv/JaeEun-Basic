@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftLayout
 import PinLayout
 import FlexLayout
 
@@ -60,16 +59,18 @@ final class PoliticianCardCell: BaseCollectionViewCell {
     
     let rootFlexContainer: UIView = UIView()
     
-    let thumbnailImageView = UIImageView().config {
+    let thumbnailImageView: UIImageView = {
         $0.backgroundColor = .blue.withAlphaComponent(0.2)
-    } // 이미지
+        return $0
+    }(UIImageView()) // 이미지
     
     let nameLabel = UILabel() // 이름
     let partyLabel = UILabel() // 당
     
-    let descriptionLabel = UILabel().config {
+    let descriptionLabel: UILabel = {
         $0.numberOfLines = 0
         $0.font = .systemFont(ofSize: 15)
-    } // 강점 3줄
+        return $0
+    }(UILabel()) // 강점 3줄
 }
 

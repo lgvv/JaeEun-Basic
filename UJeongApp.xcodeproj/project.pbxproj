@@ -21,7 +21,6 @@
 		B18EB920295DFB15001E08D7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB91F295DFB15001E08D7 /* RxRelay */; };
 		B18EB922295DFB15001E08D7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB921295DFB15001E08D7 /* RxSwift */; };
 		B18EB924295DFB15001E08D7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B18EB923295DFB15001E08D7 /* RxTest */; settings = {ATTRIBUTES = (Required, ); }; };
-		B18EB927295DFB3F001E08D7 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB926295DFB3F001E08D7 /* ReactorKit */; };
 		B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB929295DFB4C001E08D7 /* SnapKit */; };
 		B19F9B80296FCB9600F66A9F /* UJeongMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */; };
 		B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B82296FE39400F66A9F /* AppStorageService.swift */; };
@@ -61,21 +60,23 @@
 		B1CA9A8F29630C5B0016EFCD /* PoliticianUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A8E29630C5B0016EFCD /* PoliticianUseCaseProvider.swift */; };
 		B1CA9A9229632AC80016EFCD /* PoliticianSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */; };
 		B1CA9A9429632B610016EFCD /* PoliticianCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */; };
-		B1CA9A9829632FFA0016EFCD /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9729632FFA0016EFCD /* PinLayout */; };
-		B1CA9A9B296330350016EFCD /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9A296330350016EFCD /* FlexLayout */; };
-		B1CA9A9E296337E00016EFCD /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9D296337E00016EFCD /* SwiftLayout */; };
-		B1CA9AA0296337E00016EFCD /* SwiftLayoutUtil in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9A9F296337E00016EFCD /* SwiftLayoutUtil */; };
 		B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */; };
 		B1CA9AA429635DF80016EFCD /* PoliticianMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */; };
-		B1CA9AAA2963635D0016EFCD /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA62963635C0016EFCD /* MemoView.swift */; };
-		B1CA9AAD2963635D0016EFCD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AA92963635D0016EFCD /* CounterView.swift */; };
 		B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AAF296363B90016EFCD /* ComposableArchitecture */; };
 		B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = B1CA9AB1296363B90016EFCD /* Dependencies */; };
 		B1CA9AB4296439540016EFCD /* PoliticianDistrictRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */; };
 		B1CA9AB7296441970016EFCD /* DistrictPoliticianResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */; };
-		B1CA9AB9296454EB0016EFCD /* LocationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB8296454EB0016EFCD /* LocationSetting.swift */; };
+		B1CA9AB9296454EB0016EFCD /* LocationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9AB8296454EB0016EFCD /* LocationSettingView.swift */; };
 		B1CA9ABB296474460016EFCD /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9ABA296474460016EFCD /* UserDefault.swift */; };
 		B1CA9AC029647E1C0016EFCD /* Gu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9ABF29647E1C0016EFCD /* Gu.swift */; };
+		B1DB001129753278006A84BD /* LocationSettingCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB001029753278006A84BD /* LocationSettingCore.swift */; };
+		B1DB00132975329F006A84BD /* LocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB00122975329F006A84BD /* LocationSection.swift */; };
+		B1DB0016297548D2006A84BD /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB0015297548D2006A84BD /* TCACoordinators */; };
+		B1DB001929754933006A84BD /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001829754933006A84BD /* FlexLayout */; };
+		B1DB001B29754933006A84BD /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001A29754933006A84BD /* FlexLayoutYoga */; };
+		B1DB001D29754933006A84BD /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001C29754933006A84BD /* FlexLayoutYogaKit */; };
+		B1DB00202975493D006A84BD /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001F2975493D006A84BD /* PinLayout */; };
+		B1DB002229755CD5006A84BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB002129755CD5006A84BD /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,13 +140,14 @@
 		B1CA9A9329632B610016EFCD /* PoliticianCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCell.swift; sourceTree = "<group>"; };
 		B1CA9AA129635D640016EFCD /* PoliticianCardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianCardCellViewModel.swift; sourceTree = "<group>"; };
 		B1CA9AA329635DF80016EFCD /* PoliticianMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianMainCell.swift; sourceTree = "<group>"; };
-		B1CA9AA62963635C0016EFCD /* MemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
-		B1CA9AA92963635D0016EFCD /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		B1CA9AB3296439540016EFCD /* PoliticianDistrictRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianDistrictRequest.swift; sourceTree = "<group>"; };
 		B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictPoliticianResponse.swift; sourceTree = "<group>"; };
-		B1CA9AB8296454EB0016EFCD /* LocationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSetting.swift; sourceTree = "<group>"; };
+		B1CA9AB8296454EB0016EFCD /* LocationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingView.swift; sourceTree = "<group>"; };
 		B1CA9ABA296474460016EFCD /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B1CA9ABF29647E1C0016EFCD /* Gu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gu.swift; sourceTree = "<group>"; };
+		B1DB001029753278006A84BD /* LocationSettingCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingCore.swift; sourceTree = "<group>"; };
+		B1DB00122975329F006A84BD /* LocationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSection.swift; sourceTree = "<group>"; };
+		B1DB002129755CD5006A84BD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,19 +155,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DB00202975493D006A84BD /* PinLayout in Frameworks */,
 				B1CA9A2D295FF72A0016EFCD /* Differentiator in Frameworks */,
 				B18EB920295DFB15001E08D7 /* RxRelay in Frameworks */,
+				B1DB001D29754933006A84BD /* FlexLayoutYogaKit in Frameworks */,
+				B1DB001B29754933006A84BD /* FlexLayoutYoga in Frameworks */,
+				B1DB0016297548D2006A84BD /* TCACoordinators in Frameworks */,
 				B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */,
 				B18EB91E295DFB15001E08D7 /* RxCocoa in Frameworks */,
-				B1CA9A9829632FFA0016EFCD /* PinLayout in Frameworks */,
-				B1CA9AA0296337E00016EFCD /* SwiftLayoutUtil in Frameworks */,
 				B18EB922295DFB15001E08D7 /* RxSwift in Frameworks */,
 				B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */,
+				B1DB001929754933006A84BD /* FlexLayout in Frameworks */,
 				B1CA9A2F295FF72A0016EFCD /* RxDataSources in Frameworks */,
-				B1CA9A9B296330350016EFCD /* FlexLayout in Frameworks */,
 				B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */,
-				B1CA9A9E296337E00016EFCD /* SwiftLayout in Frameworks */,
-				B18EB927295DFB3F001E08D7 /* ReactorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +361,7 @@
 				B1CA9A40296002FC0016EFCD /* Notice.swift */,
 				B1CA9A8629630B9E0016EFCD /* Policician.swift */,
 				B1CA9ABF29647E1C0016EFCD /* Gu.swift */,
+				B1DB002129755CD5006A84BD /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,9 +459,9 @@
 		B1CA9A74296189F60016EFCD /* LocationSettingPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9AA92963635D0016EFCD /* CounterView.swift */,
-				B1CA9AA62963635C0016EFCD /* MemoView.swift */,
-				B1CA9AB8296454EB0016EFCD /* LocationSetting.swift */,
+				B1CA9AB8296454EB0016EFCD /* LocationSettingView.swift */,
+				B1DB001029753278006A84BD /* LocationSettingCore.swift */,
+				B1DB00122975329F006A84BD /* LocationSection.swift */,
 			);
 			path = LocationSettingPlatform;
 			sourceTree = "<group>";
@@ -536,16 +539,16 @@
 				B18EB91D295DFB15001E08D7 /* RxCocoa */,
 				B18EB91F295DFB15001E08D7 /* RxRelay */,
 				B18EB921295DFB15001E08D7 /* RxSwift */,
-				B18EB926295DFB3F001E08D7 /* ReactorKit */,
 				B18EB929295DFB4C001E08D7 /* SnapKit */,
 				B1CA9A2C295FF72A0016EFCD /* Differentiator */,
 				B1CA9A2E295FF72A0016EFCD /* RxDataSources */,
-				B1CA9A9729632FFA0016EFCD /* PinLayout */,
-				B1CA9A9A296330350016EFCD /* FlexLayout */,
-				B1CA9A9D296337E00016EFCD /* SwiftLayout */,
-				B1CA9A9F296337E00016EFCD /* SwiftLayoutUtil */,
 				B1CA9AAF296363B90016EFCD /* ComposableArchitecture */,
 				B1CA9AB1296363B90016EFCD /* Dependencies */,
+				B1DB0015297548D2006A84BD /* TCACoordinators */,
+				B1DB001829754933006A84BD /* FlexLayout */,
+				B1DB001A29754933006A84BD /* FlexLayoutYoga */,
+				B1DB001C29754933006A84BD /* FlexLayoutYogaKit */,
+				B1DB001F2975493D006A84BD /* PinLayout */,
 			);
 			productName = UJeongApp;
 			productReference = B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */;
@@ -603,13 +606,12 @@
 			mainGroup = B18EB8D2295DFA9B001E08D7;
 			packageReferences = (
 				B18EB91A295DFB15001E08D7 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				B18EB925295DFB3F001E08D7 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				B18EB928295DFB4C001E08D7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				B1CA9A9629632FFA0016EFCD /* XCRemoteSwiftPackageReference "PinLayout" */,
-				B1CA9A99296330350016EFCD /* XCRemoteSwiftPackageReference "FlexLayout" */,
-				B1CA9A9C296337E00016EFCD /* XCRemoteSwiftPackageReference "SwiftLayout" */,
 				B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				B1DB0014297548D2006A84BD /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+				B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				B1DB001E2975493D006A84BD /* XCRemoteSwiftPackageReference "PinLayout" */,
 			);
 			productRefGroup = B18EB8DC295DFA9B001E08D7 /* Products */;
 			projectDirPath = "";
@@ -651,6 +653,7 @@
 				B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */,
 				B1CA9A8929630BB60016EFCD /* PoliticianUseCase.swift in Sources */,
 				B1CA9AA229635D640016EFCD /* PoliticianCardCellViewModel.swift in Sources */,
+				B1DB002229755CD5006A84BD /* Location.swift in Sources */,
 				B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */,
 				B1CA9A3F295FF8880016EFCD /* BaseCollectionViewCell.swift in Sources */,
 				B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */,
@@ -669,6 +672,8 @@
 				B1CA9AB4296439540016EFCD /* PoliticianDistrictRequest.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,
 				B1CA9A38295FF7970016EFCD /* UITableView+RxReusableKit.swift in Sources */,
+				B1DB00132975329F006A84BD /* LocationSection.swift in Sources */,
+				B1DB001129753278006A84BD /* LocationSettingCore.swift in Sources */,
 				B1CA9A5D29603F060016EFCD /* NoticeRepository.swift in Sources */,
 				B1CA9A9429632B610016EFCD /* PoliticianCardCell.swift in Sources */,
 				B1CA9A3A295FF7970016EFCD /* ReusableCell.swift in Sources */,
@@ -678,7 +683,6 @@
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
 				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
 				B19F9B85296FE54100F66A9F /* UJeongSDK.swift in Sources */,
-				B1CA9AAA2963635D0016EFCD /* MemoView.swift in Sources */,
 				B1CA9A9229632AC80016EFCD /* PoliticianSection.swift in Sources */,
 				B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */,
 				B1CA9A37295FF7970016EFCD /* UICollectionView+RxReusableKit.swift in Sources */,
@@ -688,14 +692,13 @@
 				B1CA9AB7296441970016EFCD /* DistrictPoliticianResponse.swift in Sources */,
 				B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */,
 				B1CA9A8729630B9E0016EFCD /* Policician.swift in Sources */,
-				B1CA9AB9296454EB0016EFCD /* LocationSetting.swift in Sources */,
+				B1CA9AB9296454EB0016EFCD /* LocationSettingView.swift in Sources */,
 				B1CA9ABB296474460016EFCD /* UserDefault.swift in Sources */,
 				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
 				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
 				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
 				B1CA9A26295FF4050016EFCD /* ViewModelType.swift in Sources */,
-				B1CA9AAD2963635D0016EFCD /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,14 +993,6 @@
 				minimumVersion = 6.5.0;
 			};
 		};
-		B18EB925295DFB3F001E08D7 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 3.2.0;
-			};
-		};
 		B18EB928295DFB4C001E08D7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -1014,15 +1009,23 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B1CA9A9629632FFA0016EFCD /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+		B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.9.0;
+				branch = main;
+				kind = branch;
 			};
 		};
-		B1CA9A99296330350016EFCD /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+		B1DB0014297548D2006A84BD /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/layoutBox/FlexLayout";
 			requirement = {
@@ -1030,20 +1033,12 @@
 				minimumVersion = 1.3.0;
 			};
 		};
-		B1CA9A9C296337E00016EFCD /* XCRemoteSwiftPackageReference "SwiftLayout" */ = {
+		B1DB001E2975493D006A84BD /* XCRemoteSwiftPackageReference "PinLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ioskrew/SwiftLayout";
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.0;
-			};
-		};
-		B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				branch = main;
-				kind = branch;
+				minimumVersion = 1.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1074,11 +1069,6 @@
 			package = B18EB91A295DFB15001E08D7 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
 		};
-		B18EB926295DFB3F001E08D7 /* ReactorKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B18EB925295DFB3F001E08D7 /* XCRemoteSwiftPackageReference "ReactorKit" */;
-			productName = ReactorKit;
-		};
 		B18EB929295DFB4C001E08D7 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B18EB928295DFB4C001E08D7 /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -1094,26 +1084,6 @@
 			package = B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
 		};
-		B1CA9A9729632FFA0016EFCD /* PinLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1CA9A9629632FFA0016EFCD /* XCRemoteSwiftPackageReference "PinLayout" */;
-			productName = PinLayout;
-		};
-		B1CA9A9A296330350016EFCD /* FlexLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1CA9A99296330350016EFCD /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayout;
-		};
-		B1CA9A9D296337E00016EFCD /* SwiftLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1CA9A9C296337E00016EFCD /* XCRemoteSwiftPackageReference "SwiftLayout" */;
-			productName = SwiftLayout;
-		};
-		B1CA9A9F296337E00016EFCD /* SwiftLayoutUtil */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1CA9A9C296337E00016EFCD /* XCRemoteSwiftPackageReference "SwiftLayout" */;
-			productName = SwiftLayoutUtil;
-		};
 		B1CA9AAF296363B90016EFCD /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
@@ -1123,6 +1093,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = Dependencies;
+		};
+		B1DB0015297548D2006A84BD /* TCACoordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1DB0014297548D2006A84BD /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
+		};
+		B1DB001829754933006A84BD /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		B1DB001A29754933006A84BD /* FlexLayoutYoga */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYoga;
+		};
+		B1DB001C29754933006A84BD /* FlexLayoutYogaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYogaKit;
+		};
+		B1DB001F2975493D006A84BD /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1DB001E2975493D006A84BD /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
