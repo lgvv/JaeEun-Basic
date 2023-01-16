@@ -8,12 +8,12 @@
 import Foundation
 import ComposableArchitecture
 
-struct LocationSettingCore: ReducerProtocol {
-    struct State: Equatable {
+public struct LocationSettingCore: ReducerProtocol {
+    public struct State: Equatable {
         var selectedLocation: String = ""
     }
     
-    enum Action {
+    public enum Action {
         case onAppear
         case itemSelected(location: String)
         case updateAppStorage
@@ -29,7 +29,7 @@ struct LocationSettingCore: ReducerProtocol {
     }
     
     // NOTE: - func reduce랑 동일
-    var body: some ReducerProtocol<State, Action> {
+    public var body: some ReducerProtocol<State, Action> {
         Reduce { state, action in
             switch action {
             case .onAppear:

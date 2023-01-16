@@ -10,14 +10,15 @@ import ComposableArchitecture
 
 // MARK: - LocationSettingView
 
-struct LocationSettingView: View {
+public struct LocationSettingView: View {
     typealias Core = LocationSettingCore
     
     private let store: StoreOf<Core>
+    @Environment(\.dismiss) private var dismiss
     
     struct ViewState: Equatable {
         let allLocationSection = LocationSection.allSection()
-        var selectedLocation: String
+        public var selectedLocation: String
         
         init(state: Core.State) {
             self.selectedLocation = state.selectedLocation
@@ -37,7 +38,7 @@ struct LocationSettingView: View {
                    GridItem(.flexible()),
                    GridItem(.flexible())]
     
-    var body: some View {
+    public var body: some View {
         WithViewStore(
             self.store,
             observe: ViewState.init,
@@ -85,8 +86,7 @@ struct LocationSettingView: View {
                 .navigationBarTitle("지역 선택", displayMode: .inline)
                 .toolbar {
                     Button {
-                        // dismiss
-                        print("action")
+                        dismiss()
                     } label: {
                         Image(systemName: "checkmark")
                     }

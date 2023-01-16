@@ -37,9 +37,11 @@ class DefaultNoticeNavigator: NoticeNavigator {
     func toNoticeDetail() { }
     
     func toLocationSetting() {
-        let view = LocationSettingView(store: StoreOf<LocationSettingView.Core>(initialState: .init(), reducer: LocationSettingCore()))
-//        let view = LocationSettingView(store: )
+        let reducer = LocationSettingCore()
+        let view = LocationSettingView(store: StoreOf<LocationSettingView.Core>(initialState: .init(),
+                                                                                reducer: reducer))
         let vc = UIHostingController(rootView: view)
+        vc.modalPresentationStyle = .fullScreen
         
         navigationController.present(vc, animated: true, completion: nil)
     }
