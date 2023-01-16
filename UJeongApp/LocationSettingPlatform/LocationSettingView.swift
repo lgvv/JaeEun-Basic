@@ -43,39 +43,54 @@ struct LocationSettingView: View {
             observe: ViewState.init,
             send: Core.Action.init
         ) { viewStore in
-            
-            ForEach(viewStore.state.allLocationSection) { section in
-                List {
-                    Section {
-                        LazyVGrid(
-                            columns: columns,
-                            alignment: .center,
-                            spacing: .none
-                        ) {
-                            ForEach(section.location.districts, id: \.self) { location in
-                                
-                                Text(location)
-                                    .padding(.horizontal, 5)
-                                    .padding(.vertical, 5)
-                                    .overlay {
-                                        if location == viewStore.state.selectedLocation {
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(Color.black, lineWidth: 3)
+            NavigationView {
+                
+                ForEach(viewStore.state.allLocationSection) { section in
+                    List {
+                        Text("내가 선택한 지역:  \(viewStore.selectedLocation)")
+                        
+                        Section {
+                            LazyVGrid(
+                                columns: columns,
+                                alignment: .center,
+                                spacing: .none
+                            ) {
+                                ForEach(section.location.districts, id: \.self) { location in
+                                    
+                                    Text(location)
+                                        .padding(.horizontal, 5)
+                                        .padding(.vertical, 5)
+                                        .overlay {
+                                            if location == viewStore.state.selectedLocation {
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(Color.black, lineWidth: 3)
+                                            }
                                         }
-                                    }
-                                    .onTapGesture {
-                                        viewStore.send(.itemSelected(location: location))
-                                    }
+                                        .onTapGesture {
+                                            viewStore.send(.itemSelected(location: location))
+                                        }
+                                }
                             }
+                        } header: {
+                            Text(section.location.city)
                         }
-                    } header: {
-                        Text(section.location.city)
+                    }
+                    .listStyle(.sidebar)
+                }
+                
+                
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
+                .navigationBarTitle("지역 선택", displayMode: .inline)
+                .toolbar {
+                    Button {
+                        // dismiss
+                        print("action")
+                    } label: {
+                        Image(systemName: "checkmark")
                     }
                 }
-                .listStyle(.sidebar)
-            }
-            .onAppear {
-                viewStore.send(.onAppear)
             }
         }
     }
