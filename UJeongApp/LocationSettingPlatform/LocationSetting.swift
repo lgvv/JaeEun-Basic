@@ -29,10 +29,10 @@ struct LocationSettingView: View {
     let store: StoreOf<ViewModel>
     
     struct ViewState: Equatable {
-        var selectedItem: String
+        var selectedLocation: String
         
         init(state: ViewModel.State) {
-            self.selectedItem = state.selectedItem
+            self.selectedLocation = state.selectedLocation
         }
     }
     
@@ -64,15 +64,19 @@ struct LocationSettingView: View {
                             pinnedViews: []
                         ) {
                             ForEach(section.location.districts, id: \.self) { location in
+                                
                                 Text(location)
                                     .padding(.horizontal, 5)
-                                    .padding(.vertical, 10)
-                                    .border(Color.blue)
+                                    .padding(.vertical, 5)
+                                    .overlay {
+                                        if location == viewStore.state.selectedLocation {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(Color.black, lineWidth: 3)
+                                        }
+                                    }
                                     .onTapGesture {
-                                        print("hello \(location)")
                                         viewStore.send(.itemSelected(location: location))
                                     }
-                                
                             }
                         }
                     } header: {
@@ -87,7 +91,7 @@ struct LocationSettingView: View {
 
 struct LocationSettingReducer: ReducerProtocol {
     struct State {
-        var selectedItem = ""
+        var selectedLocation: String = ""
     }
     
     enum Action {
@@ -106,6 +110,7 @@ struct LocationSettingReducer: ReducerProtocol {
         Reduce { state, action in
             switch action {
             case let .itemSelected(location):
+                state.selectedLocation = location
                 print("location은 \(location)입니다.")
                 return .none
             }
