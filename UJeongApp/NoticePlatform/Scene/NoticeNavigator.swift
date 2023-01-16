@@ -37,7 +37,7 @@ class DefaultNoticeNavigator: NoticeNavigator {
     func toNoticeDetail() { }
     
     func toLocationSetting() {
-        let view = LocationSettingView(store: StoreOf<LocationSettingView.ViewModel>(initialState: .init(), reducer: LocationSettingReducer()))
+        let view = LocationSettingView(store: StoreOf<LocationSettingView.Core>(initialState: .init(), reducer: LocationSettingCore()))
 //        let view = LocationSettingView(store: )
         let vc = UIHostingController(rootView: view)
         
