@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LocationSection: Identifiable {
+struct LocationSection: Identifiable, Equatable {
     let id = UUID()
     
     let location: Location

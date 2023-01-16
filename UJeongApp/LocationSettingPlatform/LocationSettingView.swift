@@ -13,9 +13,10 @@ import ComposableArchitecture
 struct LocationSettingView: View {
     typealias Core = LocationSettingCore
     
-    let store: StoreOf<Core>
+    private let store: StoreOf<Core>
     
     struct ViewState: Equatable {
+        let allLocationSection = LocationSection.allSection()
         var selectedLocation: String
         
         init(state: Core.State) {
@@ -37,9 +38,13 @@ struct LocationSettingView: View {
                    GridItem(.flexible())]
     
     var body: some View {
-        WithViewStore(self.store.scope(state: \.selectedLocation)) {
-            viewStore in
-            ForEach(LocationSection.allSection()) { section in
+        WithViewStore(
+            self.store,
+            observe: ViewState.init,
+            send: Core.Action.init
+        ) { viewStore in
+            
+            ForEach(viewStore.state.allLocationSection) { section in
                 List {
                     Section {
                         LazyVGrid(
@@ -53,7 +58,7 @@ struct LocationSettingView: View {
                                     .padding(.horizontal, 5)
                                     .padding(.vertical, 5)
                                     .overlay {
-                                        if location == viewStore.state {
+                                        if location == viewStore.state.selectedLocation {
                                             RoundedRectangle(cornerRadius: 10)
                                                 .stroke(Color.black, lineWidth: 3)
                                         }

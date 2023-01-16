@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct LocationSettingCore: ReducerProtocol {
-    struct State {
+    struct State: Equatable {
         var selectedLocation: String = ""
     }
     
