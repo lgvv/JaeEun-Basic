@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10060D82976926B001359A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B10060D72976926B001359A9 /* GoogleService-Info.plist */; };
 		B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */; };
 		B18EB8E1295DFA9B001E08D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */; };
 		B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B10060D72976926B001359A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UJeongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		B18EB8DD295DFA9B001E08D7 /* UJeongApp */ = {
 			isa = PBXGroup;
 			children = (
+				B10060D72976926B001359A9 /* GoogleService-Info.plist */,
 				B1CA9A712961723C0016EFCD /* APP */,
 				B1CA9A6B29616D350016EFCD /* NoticePlatform */,
 				B1CA9A8C29630C180016EFCD /* PoliticianPlatform */,
@@ -628,6 +631,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10060D82976926B001359A9 /* GoogleService-Info.plist in Resources */,
 				B18EB8EB295DFA9C001E08D7 /* LaunchScreen.storyboard in Resources */,
 				B18EB8E8295DFA9C001E08D7 /* Assets.xcassets in Resources */,
 			);
