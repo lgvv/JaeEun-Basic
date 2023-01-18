@@ -9,19 +9,19 @@ import Foundation
 import RxSwift
 
 protocol NoticeRepository {
-    func getSearchRepository() -> Observable<SearchInfomation>
+//    func getSearchRepository() -> Observable<SearchInfomation>
 }
 
 final public class NoticeRepositoryImpl: NoticeRepository {
-    private let apiClient: APIClient
-
-    init(_ apiClient: APIClient = APIClient()) {
-        self.apiClient = apiClient
-    }
-    
-    func getSearchRepository() -> Observable<SearchInfomation> {
-        let request = SearchRequest(q: "RxSwift", page: 1)
-        let apiCall = apiClient.sendWithRx(request)
-        return apiCall
-    }
+//    private let apiClient: APIClient
+//
+//    init(_ apiClient: APIClient = APIClient()) {
+//        self.apiClient = apiClient
+//    }
+//
+//    func getSearchRepository() -> Observable<SearchInfomation> {
+//        let request = SearchRequest(q: "RxSwift", page: 1)
+//        let apiCall = apiClient.sendWithRx(request)
+//        return apiCall
+//    }
 }

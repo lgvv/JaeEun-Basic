@@ -9,17 +9,17 @@ import Foundation
 import RxSwift
 
 protocol NoticeUseCase {
-    func fetchNotice() -> Observable<SearchInfomation>
+//    func fetchNotice() -> Observable<SearchInfomation>
 }
 
 final class NoticeUseCaseImpl: NoticeUseCase {
-    private let noticeRepository: NoticeRepository
-    
-    init(noticeRepository: NoticeRepository) {
-        self.noticeRepository = noticeRepository
-    }
-    
-    func fetchNotice() -> Observable<SearchInfomation> {
-        return noticeRepository.getSearchRepository()
-    }
+//    private let noticeRepository: NoticeRepository
+//
+//    init(noticeRepository: NoticeRepository) {
+//        self.noticeRepository = noticeRepository
+//    }
+//
+//    func fetchNotice() -> Observable<SearchInfomation> {
+//        return noticeRepository.getSearchRepository()
+//    }
 }

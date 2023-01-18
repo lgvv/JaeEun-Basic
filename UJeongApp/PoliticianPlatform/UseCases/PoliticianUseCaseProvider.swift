@@ -15,7 +15,8 @@ public final class PoliticianUseCaseProvider {
     }
     
     func makePoliticianUseCase() -> PoliticianUseCase {
-        return PoliticianUseCaseImpl(repository: politicianRepository)
+        return PoliticianUseCaseImpl()
+//        return PoliticianUseCaseImpl(repository: politicianRepository)
     }
 }
 

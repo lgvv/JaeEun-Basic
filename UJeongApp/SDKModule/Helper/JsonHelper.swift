@@ -7,7 +7,7 @@
 
 import Foundation
 
-class JsonHelper {
+final class JsonHelper {
     enum ExtensionType: String {
         case json
     }
@@ -18,7 +18,7 @@ class JsonHelper {
             forResource: filename,
             withExtension: extensionType.rawValue
         ) else {
-            print("AAAA")
+            print("🚨 이름과 확장자로 파일 만들기 실패")
             return nil
         }
         
@@ -26,28 +26,23 @@ class JsonHelper {
             let data = try Data(contentsOf: fileLoaction)
             return data
         } catch {
-            print("여기서잡힘")
+            print("🚨 데이터가 해당 경로에 없어요.")
             return nil
         }
     }
     
     func parsejson<T:Codable>(_ type: T.Type, data: Data?) -> T? {
         guard let data = data else {
-            print("out")
+            print("🚨 데이터가 nil입니다.")
             return nil
         }
         
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
-//            print(" result \(result)")
-            
             return result
-            
         } catch {
-            print("ERROR")
+            print("🚨 디코딩 과정에서의 에러")
             return nil
         }
-        
-        print(" 나는요")
     }
 }

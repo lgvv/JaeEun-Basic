@@ -8,11 +8,9 @@
 import Foundation
 
 class UJeongMain {
-    let apiClient: APIClient
     var appStorageService: AppStorageServiceProtocol
     
     init() {
-        self.apiClient = APIClient()
         self.appStorageService = AppStorageService()
     }
 }

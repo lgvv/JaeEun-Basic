@@ -19,6 +19,7 @@ public final class NoticeUseCaseProvider: NoticeUseCaseProviderProtocol {
     }
     
     func makeNoticeUseCase() -> NoticeUseCase {
-        return NoticeUseCaseImpl(noticeRepository: noticeRepository)
+        return NoticeUseCaseImpl()
+//        return NoticeUseCaseImpl(noticeRepository: noticeRepository)
     }
 }
