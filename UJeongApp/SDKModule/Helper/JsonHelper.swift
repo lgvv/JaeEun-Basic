@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class JsonHelper {
+class JsonHelper {
     enum ExtensionType: String {
         case json
     }

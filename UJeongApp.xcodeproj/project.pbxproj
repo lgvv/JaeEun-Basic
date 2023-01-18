@@ -83,6 +83,7 @@
 		B1DB002229755CD5006A84BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB002129755CD5006A84BD /* Location.swift */; };
 		B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FA2977DAB900643B91 /* JsonHelper.swift */; };
 		B1E204FE2977DB2900643B91 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FD2977DB2900643B91 /* Party.swift */; };
+		B1E205002977FCC900643B91 /* FirebaseAutoWriteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FF2977FCC900643B91 /* FirebaseAutoWriteModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		B1DB002129755CD5006A84BD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B1E204FA2977DAB900643B91 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		B1E204FD2977DB2900643B91 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		B1E204FF2977FCC900643B91 /* FirebaseAutoWriteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAutoWriteModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				B10060E5297698E4001359A9 /* FirebaseConfiguration.swift */,
 				B10060E2297694AF001359A9 /* FirebaseDelegate.swift */,
 				B10060E92976ADF8001359A9 /* StringSet */,
+				B1E205012977FD0A00643B91 /* Dev */,
 			);
 			path = FirebaseModule;
 			sourceTree = "<group>";
@@ -561,6 +564,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		B1E205012977FD0A00643B91 /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				B1E204FF2977FCC900643B91 /* FirebaseAutoWriteModule.swift */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -727,6 +738,7 @@
 				B1CA9A6F29616DAA0016EFCD /* NoticeUseCaseProvider.swift in Sources */,
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
 				B10060E3297694AF001359A9 /* FirebaseDelegate.swift in Sources */,
+				B1E205002977FCC900643B91 /* FirebaseAutoWriteModule.swift in Sources */,
 				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
 				B1E204FE2977DB2900643B91 /* Party.swift in Sources */,
 				B19F9B85296FE54100F66A9F /* UJeongSDK.swift in Sources */,
