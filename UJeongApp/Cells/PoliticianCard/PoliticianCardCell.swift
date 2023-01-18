@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import PinLayout
-import FlexLayout
+//import PinLayout
+//import FlexLayout
 
 final class PoliticianCardCell: BaseCollectionViewCell {
     
@@ -21,38 +21,38 @@ final class PoliticianCardCell: BaseCollectionViewCell {
     }
     
     override func initialize() {
-        contentView.addSubview(rootFlexContainer)
+//        contentView.addSubview(rootFlexContainer)
         
-        rootFlexContainer.flex.define { flex in
-            flex.addItem()
-                .alignItems(.center)
-                .define { flex in
-                    flex.addItem(thumbnailImageView)
-                        .aspectRatio(1)
-                }
-                
-            flex.addItem()
-                .direction(.row)
-                .define { flex in
-                    flex.addItem(nameLabel)
-                    flex.addItem(partyLabel)
-                }
-                .marginLeft(10%)
-            
-            flex.addItem()
-                .define { flex in
-                    flex.addItem(nameLabel).grow(1)
-                    flex.addItem(descriptionLabel).grow(4)
-                }
-                .grow(1)
-        }
+//        rootFlexContainer.flex.define { flex in
+//            flex.addItem()
+//                .alignItems(.center)
+//                .define { flex in
+//                    flex.addItem(thumbnailImageView)
+//                        .aspectRatio(1)
+//                }
+//
+//            flex.addItem()
+//                .direction(.row)
+//                .define { flex in
+//                    flex.addItem(nameLabel)
+//                    flex.addItem(partyLabel)
+//                }
+//                .marginLeft(10%)
+//
+//            flex.addItem()
+//                .define { flex in
+//                    flex.addItem(nameLabel).grow(1)
+//                    flex.addItem(descriptionLabel).grow(4)
+//                }
+//                .grow(1)
+//        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.rootFlexContainer.pin.all(contentView.safeAreaInsets)
-        self.rootFlexContainer.flex.layout()
+//        self.rootFlexContainer.pin.all(contentView.safeAreaInsets)
+//        self.rootFlexContainer.flex.layout()
     }
     
     // MARK: - UIComponents

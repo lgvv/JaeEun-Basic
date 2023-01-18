@@ -18,11 +18,11 @@ struct Politician: Codable {
         struct Infomation: Codable {
             let gu, name: String
             let party: Party
-            let imageURL: String
+            let imageUrlString: String
             
             enum CodingKeys: String, CodingKey {
                 case gu, name, party
-                case imageURL = "image_url"
+                case imageUrlString = "image_url"
             }
         }
     }

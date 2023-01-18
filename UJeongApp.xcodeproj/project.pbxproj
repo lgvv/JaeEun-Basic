@@ -15,7 +15,6 @@
 		B10060E3297694AF001359A9 /* FirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10060E2297694AF001359A9 /* FirebaseDelegate.swift */; };
 		B10060E6297698E4001359A9 /* FirebaseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10060E5297698E4001359A9 /* FirebaseConfiguration.swift */; };
 		B10060E82976AD57001359A9 /* MayorOfSeoulGu.json in Resources */ = {isa = PBXBuildFile; fileRef = B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */; };
-		B10060EB2976BC2D001359A9 /* FirebaseWriteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10060EA2976BC2D001359A9 /* FirebaseWriteModule.swift */; };
 		B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */; };
 		B18EB8E1295DFA9B001E08D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */; };
 		B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */; };
@@ -81,10 +80,6 @@
 		B1DB001129753278006A84BD /* LocationSettingCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB001029753278006A84BD /* LocationSettingCore.swift */; };
 		B1DB00132975329F006A84BD /* LocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB00122975329F006A84BD /* LocationSection.swift */; };
 		B1DB0016297548D2006A84BD /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB0015297548D2006A84BD /* TCACoordinators */; };
-		B1DB001929754933006A84BD /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001829754933006A84BD /* FlexLayout */; };
-		B1DB001B29754933006A84BD /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001A29754933006A84BD /* FlexLayoutYoga */; };
-		B1DB001D29754933006A84BD /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001C29754933006A84BD /* FlexLayoutYogaKit */; };
-		B1DB00202975493D006A84BD /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001F2975493D006A84BD /* PinLayout */; };
 		B1DB002229755CD5006A84BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB002129755CD5006A84BD /* Location.swift */; };
 		B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FA2977DAB900643B91 /* JsonHelper.swift */; };
 		B1E204FE2977DB2900643B91 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FD2977DB2900643B91 /* Party.swift */; };
@@ -105,7 +100,6 @@
 		B10060E2297694AF001359A9 /* FirebaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDelegate.swift; sourceTree = "<group>"; };
 		B10060E5297698E4001359A9 /* FirebaseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfiguration.swift; sourceTree = "<group>"; };
 		B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MayorOfSeoulGu.json; sourceTree = "<group>"; };
-		B10060EA2976BC2D001359A9 /* FirebaseWriteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWriteModule.swift; sourceTree = "<group>"; };
 		B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UJeongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,11 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10060DD29769423001359A9 /* FirebaseDatabaseSwift in Frameworks */,
-				B1DB00202975493D006A84BD /* PinLayout in Frameworks */,
 				B1CA9A2D295FF72A0016EFCD /* Differentiator in Frameworks */,
 				B18EB920295DFB15001E08D7 /* RxRelay in Frameworks */,
-				B1DB001D29754933006A84BD /* FlexLayoutYogaKit in Frameworks */,
-				B1DB001B29754933006A84BD /* FlexLayoutYoga in Frameworks */,
 				B10060DB29769423001359A9 /* FirebaseAuth in Frameworks */,
 				B10060DF29769423001359A9 /* FirebaseFirestoreSwift in Frameworks */,
 				B1DB0016297548D2006A84BD /* TCACoordinators in Frameworks */,
@@ -187,7 +178,6 @@
 				B18EB922295DFB15001E08D7 /* RxSwift in Frameworks */,
 				B10060E129769423001359A9 /* FirebaseStorage in Frameworks */,
 				B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */,
-				B1DB001929754933006A84BD /* FlexLayout in Frameworks */,
 				B1CA9A2F295FF72A0016EFCD /* RxDataSources in Frameworks */,
 				B1CA9AB2296363B90016EFCD /* Dependencies in Frameworks */,
 			);
@@ -221,14 +211,6 @@
 				B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */,
 			);
 			path = StringSet;
-			sourceTree = "<group>";
-		};
-		B10060EC2976BDB2001359A9 /* FirebaseAuto */ = {
-			isa = PBXGroup;
-			children = (
-				B10060EA2976BC2D001359A9 /* FirebaseWriteModule.swift */,
-			);
-			path = FirebaseAuto;
 			sourceTree = "<group>";
 		};
 		B1205D9F295DFFE3005B2FF8 /* Frameworks */ = {
@@ -276,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				B18EB8F5295DFA9D001E08D7 /* UJeongAppTests.swift */,
-				B10060EC2976BDB2001359A9 /* FirebaseAuto */,
 			);
 			path = UJeongAppTests;
 			sourceTree = "<group>";
@@ -372,6 +353,7 @@
 				B19F9B81296FE37D00F66A9F /* UserDefaultModule */,
 				B18EB90E295DFAC2001E08D7 /* NetworkModule */,
 				B10060E4297694B3001359A9 /* FirebaseModule */,
+				B1E204FC2977DABE00643B91 /* Helper */,
 			);
 			path = SDKModule;
 			sourceTree = "<group>";
@@ -456,7 +438,6 @@
 				B1CA9A4D296018690016EFCD /* BaseArchitecture */,
 				B1CA9A432960030C0016EFCD /* Models */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
-				B1E204FC2977DABE00643B91 /* Helper */,
 			);
 			path = CoreModule;
 			sourceTree = "<group>";
@@ -606,10 +587,6 @@
 				B1CA9AAF296363B90016EFCD /* ComposableArchitecture */,
 				B1CA9AB1296363B90016EFCD /* Dependencies */,
 				B1DB0015297548D2006A84BD /* TCACoordinators */,
-				B1DB001829754933006A84BD /* FlexLayout */,
-				B1DB001A29754933006A84BD /* FlexLayoutYoga */,
-				B1DB001C29754933006A84BD /* FlexLayoutYogaKit */,
-				B1DB001F2975493D006A84BD /* PinLayout */,
 				B10060DA29769423001359A9 /* FirebaseAuth */,
 				B10060DC29769423001359A9 /* FirebaseDatabaseSwift */,
 				B10060DE29769423001359A9 /* FirebaseFirestoreSwift */,
@@ -675,8 +652,6 @@
 				B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				B1DB0014297548D2006A84BD /* XCRemoteSwiftPackageReference "TCACoordinators" */,
-				B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */,
-				B1DB001E2975493D006A84BD /* XCRemoteSwiftPackageReference "PinLayout" */,
 				B10060D929769423001359A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B18EB8DC295DFA9B001E08D7 /* Products */;
@@ -778,7 +753,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10060EB2976BC2D001359A9 /* FirebaseWriteModule.swift in Sources */,
 				B18EB8F6295DFA9D001E08D7 /* UJeongAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1106,22 +1080,6 @@
 				minimumVersion = 0.3.0;
 			};
 		};
-		B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/layoutBox/FlexLayout";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.3.0;
-			};
-		};
-		B1DB001E2975493D006A84BD /* XCRemoteSwiftPackageReference "PinLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/layoutBox/PinLayout";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.9.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1199,26 +1157,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1DB0014297548D2006A84BD /* XCRemoteSwiftPackageReference "TCACoordinators" */;
 			productName = TCACoordinators;
-		};
-		B1DB001829754933006A84BD /* FlexLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayout;
-		};
-		B1DB001A29754933006A84BD /* FlexLayoutYoga */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayoutYoga;
-		};
-		B1DB001C29754933006A84BD /* FlexLayoutYogaKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1DB001729754933006A84BD /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayoutYogaKit;
-		};
-		B1DB001F2975493D006A84BD /* PinLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1DB001E2975493D006A84BD /* XCRemoteSwiftPackageReference "PinLayout" */;
-			productName = PinLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

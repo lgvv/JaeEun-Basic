@@ -39,7 +39,8 @@ public class JsonHelper {
         
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
-            print(" result \(result)")
+//            print(" result \(result)")
+            
             return result
             
         } catch {
