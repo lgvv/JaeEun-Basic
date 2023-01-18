@@ -86,6 +86,8 @@
 		B1DB001D29754933006A84BD /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001C29754933006A84BD /* FlexLayoutYogaKit */; };
 		B1DB00202975493D006A84BD /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1DB001F2975493D006A84BD /* PinLayout */; };
 		B1DB002229755CD5006A84BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB002129755CD5006A84BD /* Location.swift */; };
+		B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FA2977DAB900643B91 /* JsonHelper.swift */; };
+		B1E204FE2977DB2900643B91 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FD2977DB2900643B91 /* Party.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,8 @@
 		B1DB001029753278006A84BD /* LocationSettingCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingCore.swift; sourceTree = "<group>"; };
 		B1DB00122975329F006A84BD /* LocationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSection.swift; sourceTree = "<group>"; };
 		B1DB002129755CD5006A84BD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B1E204FA2977DAB900643B91 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		B1E204FD2977DB2900643B91 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +413,7 @@
 				B1CA9A8629630B9E0016EFCD /* Policician.swift */,
 				B1CA9ABF29647E1C0016EFCD /* Gu.swift */,
 				B1DB002129755CD5006A84BD /* Location.swift */,
+				B1E204FD2977DB2900643B91 /* Party.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				B1CA9A4D296018690016EFCD /* BaseArchitecture */,
 				B1CA9A432960030C0016EFCD /* Models */,
 				B1CA9A30295FF7970016EFCD /* ThirdParty */,
+				B1E204FC2977DABE00643B91 /* Helper */,
 			);
 			path = CoreModule;
 			sourceTree = "<group>";
@@ -564,6 +570,14 @@
 				B1CA9AB6296441970016EFCD /* DistrictPoliticianResponse.swift */,
 			);
 			path = DistrictPolitician;
+			sourceTree = "<group>";
+		};
+		B1E204FC2977DABE00643B91 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B1E204FA2977DAB900643B91 /* JsonHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -715,6 +729,7 @@
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
 				B18EB915295DFAC2001E08D7 /* Request.swift in Sources */,
 				B1CA9A8B29630C040016EFCD /* PoliticianRepository.swift in Sources */,
+				B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */,
 				B1CA9AC029647E1C0016EFCD /* Gu.swift in Sources */,
 				B1CA9A8F29630C5B0016EFCD /* PoliticianUseCaseProvider.swift in Sources */,
 				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
@@ -738,6 +753,7 @@
 				B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */,
 				B10060E3297694AF001359A9 /* FirebaseDelegate.swift in Sources */,
 				B1CA9A5A29602B0B0016EFCD /* Observable+.swift in Sources */,
+				B1E204FE2977DB2900643B91 /* Party.swift in Sources */,
 				B19F9B85296FE54100F66A9F /* UJeongSDK.swift in Sources */,
 				B1CA9A9229632AC80016EFCD /* PoliticianSection.swift in Sources */,
 				B1CA9A632960A25E0016EFCD /* NoticeViewModel.swift in Sources */,

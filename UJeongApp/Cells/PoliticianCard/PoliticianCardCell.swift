@@ -15,8 +15,8 @@ final class PoliticianCardCell: BaseCollectionViewCell {
     
     func bind(_ viewModel: PoliticianCardCellViewModel) {
         self.thumbnailImageView.image = UIImage()
-        self.nameLabel.text = viewModel.politician.name
-        self.partyLabel.text = viewModel.politician.party
+//        self.nameLabel.text = viewModel.politician.name
+//        self.partyLabel.text = viewModel.politician.party
         self.descriptionLabel.text = ""
     }
     
