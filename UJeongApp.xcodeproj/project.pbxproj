@@ -14,7 +14,8 @@
 		B10060E129769423001359A9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B10060E029769423001359A9 /* FirebaseStorage */; };
 		B10060E3297694AF001359A9 /* FirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10060E2297694AF001359A9 /* FirebaseDelegate.swift */; };
 		B10060E6297698E4001359A9 /* FirebaseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10060E5297698E4001359A9 /* FirebaseConfiguration.swift */; };
-		B10060E82976AD57001359A9 /* MayorOfSeoulGu.strings in Resources */ = {isa = PBXBuildFile; fileRef = B10060E72976AD57001359A9 /* MayorOfSeoulGu.strings */; };
+		B10060E82976AD57001359A9 /* MayorOfSeoulGu.json in Resources */ = {isa = PBXBuildFile; fileRef = B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */; };
+		B10060EB2976BC2D001359A9 /* FirebaseWriteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10060EA2976BC2D001359A9 /* FirebaseWriteModule.swift */; };
 		B18EB8DF295DFA9B001E08D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */; };
 		B18EB8E1295DFA9B001E08D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */; };
 		B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB8E2295DFA9B001E08D7 /* NoticeViewController.swift */; };
@@ -101,7 +102,8 @@
 		B10060D72976926B001359A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B10060E2297694AF001359A9 /* FirebaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDelegate.swift; sourceTree = "<group>"; };
 		B10060E5297698E4001359A9 /* FirebaseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfiguration.swift; sourceTree = "<group>"; };
-		B10060E72976AD57001359A9 /* MayorOfSeoulGu.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MayorOfSeoulGu.strings; sourceTree = "<group>"; };
+		B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MayorOfSeoulGu.json; sourceTree = "<group>"; };
+		B10060EA2976BC2D001359A9 /* FirebaseWriteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWriteModule.swift; sourceTree = "<group>"; };
 		B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UJeongApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,9 +214,17 @@
 		B10060E92976ADF8001359A9 /* StringSet */ = {
 			isa = PBXGroup;
 			children = (
-				B10060E72976AD57001359A9 /* MayorOfSeoulGu.strings */,
+				B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */,
 			);
 			path = StringSet;
+			sourceTree = "<group>";
+		};
+		B10060EC2976BDB2001359A9 /* FirebaseAuto */ = {
+			isa = PBXGroup;
+			children = (
+				B10060EA2976BC2D001359A9 /* FirebaseWriteModule.swift */,
+			);
+			path = FirebaseAuto;
 			sourceTree = "<group>";
 		};
 		B1205D9F295DFFE3005B2FF8 /* Frameworks */ = {
@@ -262,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				B18EB8F5295DFA9D001E08D7 /* UJeongAppTests.swift */,
+				B10060EC2976BDB2001359A9 /* FirebaseAuto */,
 			);
 			path = UJeongAppTests;
 			sourceTree = "<group>";
@@ -671,7 +682,7 @@
 			files = (
 				B10060D82976926B001359A9 /* GoogleService-Info.plist in Resources */,
 				B18EB8EB295DFA9C001E08D7 /* LaunchScreen.storyboard in Resources */,
-				B10060E82976AD57001359A9 /* MayorOfSeoulGu.strings in Resources */,
+				B10060E82976AD57001359A9 /* MayorOfSeoulGu.json in Resources */,
 				B18EB8E8295DFA9C001E08D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10060EB2976BC2D001359A9 /* FirebaseWriteModule.swift in Sources */,
 				B18EB8F6295DFA9D001E08D7 /* UJeongAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
