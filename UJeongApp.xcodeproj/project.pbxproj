@@ -28,6 +28,8 @@
 		B18EB924295DFB15001E08D7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B18EB923295DFB15001E08D7 /* RxTest */; settings = {ATTRIBUTES = (Required, ); }; };
 		B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB929295DFB4C001E08D7 /* SnapKit */; };
 		B19062862979AF7800145D9B /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B19062852979AF7800145D9B /* Nuke */; };
+		B19062892979B91500145D9B /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19062882979B91500145D9B /* Asset.swift */; };
+		B190628B2979B97B00145D9B /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190628A2979B97B00145D9B /* UIImage+.swift */; };
 		B19F9B80296FCB9600F66A9F /* UJeongMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */; };
 		B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B82296FE39400F66A9F /* AppStorageService.swift */; };
 		B19F9B85296FE54100F66A9F /* UJeongSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B84296FE54100F66A9F /* UJeongSDK.swift */; };
@@ -105,6 +107,8 @@
 		B18EB8EC295DFA9C001E08D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B18EB8F1295DFA9D001E08D7 /* UJeongAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UJeongAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18EB8F5295DFA9D001E08D7 /* UJeongAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UJeongAppTests.swift; sourceTree = "<group>"; };
+		B19062882979B91500145D9B /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		B190628A2979B97B00145D9B /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UJeongMain.swift; sourceTree = "<group>"; };
 		B19F9B82296FE39400F66A9F /* AppStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageService.swift; sourceTree = "<group>"; };
 		B19F9B84296FE54100F66A9F /* UJeongSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UJeongSDK.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				B1CA9A64296169180016EFCD /* CoreModule */,
 				B1CA9A28295FF41C0016EFCD /* SDKModule */,
 				B10060D72976926B001359A9 /* GoogleService-Info.plist */,
+				B190628D2979B98500145D9B /* DesignSystem */,
 			);
 			path = UJeongApp;
 			sourceTree = "<group>";
@@ -252,6 +257,32 @@
 				B18EB8F5295DFA9D001E08D7 /* UJeongAppTests.swift */,
 			);
 			path = UJeongAppTests;
+			sourceTree = "<group>";
+		};
+		B190628C2979B97F00145D9B /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				B19062882979B91500145D9B /* Asset.swift */,
+				B190628A2979B97B00145D9B /* UIImage+.swift */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		B190628D2979B98500145D9B /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				B190628E2979BAEE00145D9B /* Resources */,
+				B190628C2979B97F00145D9B /* Asset */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		B190628E2979BAEE00145D9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B18EB8E7295DFA9C001E08D7 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B19F9B7C296D5E6100F66A9F /* Scene */ = {
@@ -320,7 +351,6 @@
 		B1CA9A29295FF4280016EFCD /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B18EB8E7295DFA9C001E08D7 /* Assets.xcassets */,
 				B18EB8E9295DFA9C001E08D7 /* LaunchScreen.storyboard */,
 				B18EB8EC295DFA9C001E08D7 /* Info.plist */,
 			);
@@ -645,11 +675,13 @@
 				B1CA9A8B29630C040016EFCD /* PoliticianRepository.swift in Sources */,
 				B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */,
 				B1CA9AC029647E1C0016EFCD /* Gu.swift in Sources */,
+				B19062892979B91500145D9B /* Asset.swift in Sources */,
 				B1CA9A8F29630C5B0016EFCD /* PoliticianUseCaseProvider.swift in Sources */,
 				B1CA9A6829616A290016EFCD /* Application.swift in Sources */,
 				B1CA9A8329630B5A0016EFCD /* PoliticianViewModel.swift in Sources */,
 				B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */,
 				B19F9B80296FCB9600F66A9F /* UJeongMain.swift in Sources */,
+				B190628B2979B97B00145D9B /* UIImage+.swift in Sources */,
 				B1CA9A3B295FF7970016EFCD /* UITableView+ReusableKit.swift in Sources */,
 				B1CA9A7D2962FB190016EFCD /* PoliticianViewController.swift in Sources */,
 				B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */,

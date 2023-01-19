@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import Nuke
 
 final class PoliticianCardCell: BaseCollectionViewCell {
     typealias ViewModel = PoliticianCardCellViewModel
