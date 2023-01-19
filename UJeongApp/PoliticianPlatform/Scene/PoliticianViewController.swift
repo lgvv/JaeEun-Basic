@@ -35,11 +35,7 @@ class PoliticianViewController: UIViewController {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
-        let pull = collectionView.refreshControl!.rx
-            .controlEvent(.valueChanged)
-            .asDriver()
-        
-        let input = PoliticianViewModel.Input(fetchTrigger: Driver.merge(viewWillAppear, pull))
+        let input = PoliticianViewModel.Input(fetchTrigger: Driver.merge(viewWillAppear))
         
         let output = viewModel.transform(input: input)
         
@@ -73,8 +69,6 @@ class PoliticianViewController: UIViewController {
         cv.delegate = self
         
         cv.register(Reusable.card)
-        cv.backgroundColor = .brown
-        cv.refreshControl = UIRefreshControl()
         
         return cv
     }()
