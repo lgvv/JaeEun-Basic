@@ -6,8 +6,6 @@
 //
 
 import UIKit
-//import PinLayout
-//import FlexLayout
 
 final class PoliticianCardCell: BaseCollectionViewCell {
     
