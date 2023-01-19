@@ -61,6 +61,9 @@ final class PoliticianCardCell: BaseCollectionViewCell {
 
 extension PoliticianCardCell {
     func configureUI() {
+        contentView.layer.cornerRadius = 12
+        contentView.layer.borderWidth = 2
+        
         contentView.addSubview(thumbnailImageView)
         thumbnailImageView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview().inset(10)
