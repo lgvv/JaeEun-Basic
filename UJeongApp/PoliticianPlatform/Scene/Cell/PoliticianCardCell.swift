@@ -21,6 +21,9 @@ final class PoliticianCardCell: BaseCollectionViewCell {
             .sink { [weak self] information in
                 guard let self else { return }
                 
+                let assetName = "서울시-" + information.gu + ".jpeg"
+                self.thumbnailImageView.image = UIImage(assetName: assetName)
+                
                 self.nameLabel.text = information.name
                 self.guLabel.text = information.gu
                 self.partyLabel.text = information.party.rawValue
