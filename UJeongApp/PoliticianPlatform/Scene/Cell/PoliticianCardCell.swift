@@ -21,6 +21,9 @@ final class PoliticianCardCell: BaseCollectionViewCell {
                 guard let self else { return }
                 
                 self.nameLabel.text = information.name
+                self.guLabel.text = information.gu
+                self.partyLabel.text = information.party.rawValue
+                
             }.store(in: &cancelBag)
     }
     
@@ -35,8 +38,14 @@ final class PoliticianCardCell: BaseCollectionViewCell {
         return $0
     }(UIImageView()) // 이미지
     
-    private lazy var nameLabel = UILabel() // 이름
+    private lazy var stackView: UIStackView = {
+        $0.axis = .vertical
+        $0.alignment = .top
+        return $0
+    }(UIStackView())
     
+    private lazy var nameLabel = UILabel() // 이름
+    private lazy var guLabel = UILabel() // 구
     private lazy var partyLabel = UILabel() // 당
     
     private lazy var descriptionLabel: UILabel = {
@@ -48,15 +57,21 @@ final class PoliticianCardCell: BaseCollectionViewCell {
 
 extension PoliticianCardCell {
     func configureUI() {
-//        contentView.addSubview(thumbnailImageView)
-//        thumbnailImageView.snp.makeConstraints {
-//            $0.top.leading.trailing.equalToSuperview().inset(10)
-//            $0.height.equalTo(thumbnailImageView.snp.width).multipliedBy(1.2)
-//        }
-        
-        contentView.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        contentView.addSubview(thumbnailImageView)
+        thumbnailImageView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview().inset(10)
+            $0.height.equalTo(thumbnailImageView.snp.width).multipliedBy(1.2)
         }
+        
+        contentView.addSubview(stackView)
+        stackView.addArrangedSubview(nameLabel)
+        stackView.addArrangedSubview(guLabel)
+        stackView.addArrangedSubview(partyLabel)
+        stackView.snp.makeConstraints {
+            $0.top.equalTo(thumbnailImageView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(10)
+        }
+        
+        
     }
 }

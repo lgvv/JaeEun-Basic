@@ -27,6 +27,7 @@
 		B18EB922295DFB15001E08D7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB921295DFB15001E08D7 /* RxSwift */; };
 		B18EB924295DFB15001E08D7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B18EB923295DFB15001E08D7 /* RxTest */; settings = {ATTRIBUTES = (Required, ); }; };
 		B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B18EB929295DFB4C001E08D7 /* SnapKit */; };
+		B19062862979AF7800145D9B /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B19062852979AF7800145D9B /* Nuke */; };
 		B19F9B80296FCB9600F66A9F /* UJeongMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */; };
 		B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B82296FE39400F66A9F /* AppStorageService.swift */; };
 		B19F9B85296FE54100F66A9F /* UJeongSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B84296FE54100F66A9F /* UJeongSDK.swift */; };
@@ -166,6 +167,7 @@
 				B1CA9AB0296363B90016EFCD /* ComposableArchitecture in Frameworks */,
 				B18EB91E295DFB15001E08D7 /* RxCocoa in Frameworks */,
 				B18EB922295DFB15001E08D7 /* RxSwift in Frameworks */,
+				B19062862979AF7800145D9B /* Nuke in Frameworks */,
 				B10060E129769423001359A9 /* FirebaseStorage in Frameworks */,
 				B18EB92A295DFB4C001E08D7 /* SnapKit in Frameworks */,
 				B1CA9A2F295FF72A0016EFCD /* RxDataSources in Frameworks */,
@@ -528,6 +530,7 @@
 				B10060DC29769423001359A9 /* FirebaseDatabaseSwift */,
 				B10060DE29769423001359A9 /* FirebaseFirestoreSwift */,
 				B10060E029769423001359A9 /* FirebaseStorage */,
+				B19062852979AF7800145D9B /* Nuke */,
 			);
 			productName = UJeongApp;
 			productReference = B18EB8DB295DFA9B001E08D7 /* UJeongApp.app */;
@@ -590,6 +593,7 @@
 				B1CA9AAE296363B90016EFCD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				B1DB0014297548D2006A84BD /* XCRemoteSwiftPackageReference "TCACoordinators" */,
 				B10060D929769423001359A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B19062842979AF7800145D9B /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = B18EB8DC295DFA9B001E08D7 /* Products */;
 			projectDirPath = "";
@@ -988,6 +992,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		B19062842979AF7800145D9B /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
 		B1CA9A2B295FF72A0016EFCD /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
@@ -1064,6 +1076,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B18EB928295DFB4C001E08D7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		B19062852979AF7800145D9B /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B19062842979AF7800145D9B /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 		B1CA9A2C295FF72A0016EFCD /* Differentiator */ = {
 			isa = XCSwiftPackageProductDependency;
