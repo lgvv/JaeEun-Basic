@@ -27,8 +27,24 @@ final class PoliticianViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
+        let politicians = useCase.fetchAllPolitician()
+            .map { infomation in
+                self.convertToSection(from: infomation)
+            }
+            .debug("✅")
+            .asDriver(onErrorJustReturn: [])
         
-        return Output(politicians: .empty())
+        
+        return Output(politicians: politicians)
     }
     
+    func convertToSection(from items: [Politician.Mayor.Infomation]) -> [PoliticianSection] {
+        let cardItems: [PoliticianSectionItem] = items.map { politician in
+            let viewModel = PoliticianCardCellViewModel(with: politician)
+            return PoliticianSectionItem.politicianCardCell(viewModel)
+        }
+        
+        let cardSection: PoliticianSection = PoliticianSection.politicianCardCell(cardItems)
+        return [cardSection]
+    }
 }

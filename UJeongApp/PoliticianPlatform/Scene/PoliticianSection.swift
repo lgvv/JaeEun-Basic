@@ -36,14 +36,4 @@ extension PoliticianSection: SectionModelType {
         case .politicianCardCell: self = .politicianCardCell(items)
         }
     }
-    
-    func convertToSection(from items: [Politician]) -> [PoliticianSection] {
-        let cardItems: [PoliticianSectionItem] = items.map { politician in
-            let viewModel = PoliticianCardCellViewModel(with: politician)
-            return PoliticianSectionItem.politicianCardCell(viewModel)
-        }
-        
-        let cardSection: PoliticianSection = PoliticianSection.politicianCardCell(cardItems)
-        return [cardSection]
-    }
 }

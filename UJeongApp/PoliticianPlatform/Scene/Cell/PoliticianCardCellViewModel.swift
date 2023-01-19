@@ -8,9 +8,9 @@
 import Foundation
 
 final class PoliticianCardCellViewModel {
-    let politician: Politician
+    let infomation: Politician.Mayor.Infomation
     
-    init(with politician: Politician) {
-        self.politician = politician
+    init(with infomation: Politician.Mayor.Infomation) {
+        self.infomation = infomation
     }
 }
