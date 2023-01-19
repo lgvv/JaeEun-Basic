@@ -9,24 +9,18 @@ import Foundation
 import RxSwift
 
 protocol PoliticianRepsitory {
-//    func getDistrictPoliticians() -> Observable<[Politician]>
+    func getAllPolitician() -> Observable<[Politician.Mayor.Infomation]>
 }
 
 final public class PoliticianRepsitoryImpl: PoliticianRepsitory {
-//    private let apiClient: APIClient
-//
-//    init(_ apiClient: APIClient = APIClient()) {
-//        self.apiClient = apiClient
-//    }
-//
-//    /// 지역구 의원에 대한 리스트를 반환
-//    func getDistrictPoliticians() -> Observable<[Politician]> {
-//        let requset = DistrictPoliticianRequest()
-//        let apiCall = apiClient.sendWithRx(requset)
-//            .map { result -> [Politician] in
-//                return result.data
-//            }
-//
-//        return apiCall
-//    }
+    private let service: UJeongSDKService
+    
+    init(_ service: UJeongSDKService = UJeongSDKService()) {
+        self.service = service
+    }
+    
+    func getAllPolitician() -> Observable<[Politician.Mayor.Infomation]> {
+        let result = service.getAllPolitician()
+        return Observable.just(result)
+    }
 }

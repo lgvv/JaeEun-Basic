@@ -79,6 +79,7 @@
 		B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FA2977DAB900643B91 /* JsonHelper.swift */; };
 		B1E204FE2977DB2900643B91 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FD2977DB2900643B91 /* Party.swift */; };
 		B1E205002977FCC900643B91 /* FirebaseAutoWriteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E204FF2977FCC900643B91 /* FirebaseAutoWriteModule.swift */; };
+		B1E2050329780ACF00643B91 /* LocalStringFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2050229780ACF00643B91 /* LocalStringFileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		B1E204FA2977DAB900643B91 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		B1E204FD2977DB2900643B91 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		B1E204FF2977FCC900643B91 /* FirebaseAutoWriteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAutoWriteModule.swift; sourceTree = "<group>"; };
+		B1E2050229780ACF00643B91 /* LocalStringFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStringFileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,18 +194,18 @@
 			children = (
 				B10060E5297698E4001359A9 /* FirebaseConfiguration.swift */,
 				B10060E2297694AF001359A9 /* FirebaseDelegate.swift */,
-				B10060E92976ADF8001359A9 /* StringSet */,
 				B1E205012977FD0A00643B91 /* Dev */,
 			);
 			path = FirebaseModule;
 			sourceTree = "<group>";
 		};
-		B10060E92976ADF8001359A9 /* StringSet */ = {
+		B10060E92976ADF8001359A9 /* LocalStringFileModule */ = {
 			isa = PBXGroup;
 			children = (
+				B1E2050229780ACF00643B91 /* LocalStringFileService.swift */,
 				B10060E72976AD57001359A9 /* MayorOfSeoulGu.json */,
 			);
-			path = StringSet;
+			path = LocalStringFileModule;
 			sourceTree = "<group>";
 		};
 		B1205D9F295DFFE3005B2FF8 /* Frameworks */ = {
@@ -317,6 +319,7 @@
 				B19F9B84296FE54100F66A9F /* UJeongSDK.swift */,
 				B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */,
 				B19F9B81296FE37D00F66A9F /* UserDefaultModule */,
+				B10060E92976ADF8001359A9 /* LocalStringFileModule */,
 				B10060E4297694B3001359A9 /* FirebaseModule */,
 				B1E204FC2977DABE00643B91 /* Helper */,
 			);
@@ -706,6 +709,7 @@
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
 				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
 				B1CA9A26295FF4050016EFCD /* ViewModelType.swift in Sources */,
+				B1E2050329780ACF00643B91 /* LocalStringFileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

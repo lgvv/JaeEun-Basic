@@ -19,6 +19,4 @@ public class FirebaseConfiguration: FirebaseConfigurationProtocol {
     func configuration<T: AppDelegate>(_ delegate: T) {
         FirebaseApp.configure()
     }
-    
-    // MARK: - Auto Write
 }

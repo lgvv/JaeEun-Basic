@@ -19,9 +19,16 @@ public class UJeongSDKService: UJeongSDKServiceProtocol {
         return UJeongMain()
     }()
     
-    // MARK: - AppStorage
+    // MARK: - AppStorageService
+    
     var selectedLocation: String {
         get { main.appStorageService.selectedLocation }
         set { main.appStorageService.selectedLocation = newValue }
+    }
+    
+    // MARK: - LocalStringFileService
+    
+    func getAllPolitician() -> [Politician.Mayor.Infomation] {
+        return main.localStringFileServivce.getAllPolitician()
     }
 }

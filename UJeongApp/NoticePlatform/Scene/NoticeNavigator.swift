@@ -43,10 +43,6 @@ class DefaultNoticeNavigator: NoticeNavigator {
         let vc = UIHostingController(rootView: view)
         vc.modalPresentationStyle = .fullScreen
         
-        let a = FirebaseDatabaseService()
-        a.write()
-        print("A")
-        
         navigationController.present(vc, animated: true, completion: nil)
     }
 }

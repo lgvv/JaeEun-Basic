@@ -17,20 +17,20 @@ import Foundation
 class FirebaseAutoWriteModule {
     let serivce = FirebaseDatabaseService()
 
-    @available(swift, message: "파이어베이스 너무 공수가 커서 없앴습니다.")
-    func write_서울_구청장_데이터() {
-        let data = serivce.helper.loadLocalFile("MayorOfSeoulGu", .json)
-        let result = serivce.helper.parsejson(Politician.self, data: data)
-
-        result?.mayor.seoul.forEach { info in
-            let object = [
-                "gu": info.gu,
-                "name": info.name,
-                "party": info.party.rawValue,
-                "imageUrl": info.imageUrlString
-            ]
-
-            serivce.ref.child("mayor/seoul-\(info.gu)").setValue(object)
-        }
-    }
+//    @available(swift, message: "파이어베이스 너무 공수가 커서 없앴습니다.")
+//    func write_서울_구청장_데이터() {
+//        let data = serivce.helper.loadLocalFile("MayorOfSeoulGu", .json)
+//        let result = serivce.helper.parsejson(Politician.self, data: data)
+//
+//        result?.mayor.seoul.forEach { info in
+//            let object = [
+//                "gu": info.gu,
+//                "name": info.name,
+//                "party": info.party.rawValue,
+//                "imageUrl": info.imageUrlString
+//            ]
+//
+//            serivce.ref.child("mayor/seoul-\(info.gu)").setValue(object)
+//        }
+//    }
 }

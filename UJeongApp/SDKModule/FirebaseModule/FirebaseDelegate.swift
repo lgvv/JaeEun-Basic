@@ -10,7 +10,6 @@ import FirebaseDatabase
 
 public class FirebaseDatabaseService {
     var ref: DatabaseReference!
-    let helper = JsonHelper()
     
     init() {
         ref = Database.database().reference()
@@ -18,6 +17,6 @@ public class FirebaseDatabaseService {
     
     // MARK: - Write
     func write() {
-        print("나는 불립니다요")
+        //
     }
 }
