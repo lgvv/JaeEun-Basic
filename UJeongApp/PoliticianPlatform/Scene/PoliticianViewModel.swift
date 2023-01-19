@@ -31,11 +31,9 @@ final class PoliticianViewModel: ViewModelType {
             .map { infomation in
                 self.convertToSection(from: infomation)
             }
-            .debug("✅")
-            .asDriver(onErrorJustReturn: [])
         
         
-        return Output(politicians: politicians)
+        return Output(politicians: politicians.asDriver(onErrorJustReturn: []))
     }
     
     func convertToSection(from items: [Politician.Mayor.Infomation]) -> [PoliticianSection] {

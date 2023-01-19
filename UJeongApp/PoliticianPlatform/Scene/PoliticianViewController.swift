@@ -23,7 +23,7 @@ class PoliticianViewController: UIViewController {
             switch item {
             case .politicianCardCell(let viewModel):
                 let cell = collectionView.dequeue(Reusable.card, for: indexPath)
-                cell.bind(viewModel)
+                cell.bind(viewModel: viewModel)
                 
                 return cell
             }
@@ -44,7 +44,8 @@ class PoliticianViewController: UIViewController {
         let output = viewModel.transform(input: input)
         
         disposeBag.insert {
-            output.politicians.drive(collectionView.rx.items(dataSource: self.dataSource))
+            output.politicians
+                .drive(collectionView.rx.items(dataSource: self.dataSource))
         }
     }
     
@@ -66,9 +67,13 @@ class PoliticianViewController: UIViewController {
     // MARK: - UIComponents
     
     lazy var collectionView: UICollectionView = {
-        let layout = createLayout()
+        let layout = UICollectionViewFlowLayout()
+        
         var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.delegate = self
+        
         cv.register(Reusable.card)
+        cv.backgroundColor = .brown
         cv.refreshControl = UIRefreshControl()
         
         return cv
@@ -76,24 +81,26 @@ class PoliticianViewController: UIViewController {
 }
 
 extension PoliticianViewController {
-    func createLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection in
-            
-            switch section {
-            case 0: return UICollectionViewLayoutSet.shared.notice()
-            default: return UICollectionViewLayoutSet.shared.notice()
-            }
-        }
-    }
-    
     func configureUI() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
     func configureNavigationItem() {
         
+    }
+}
+
+extension PoliticianViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemSpacing: CGFloat = 10
+        let textAreaHeight: CGFloat = 65
+        
+        let width: CGFloat = (collectionView.bounds.width - itemSpacing) / 2
+        let height: CGFloat = width * 10/7 + textAreaHeight
+        
+        return CGSize(width: width, height: height)
     }
 }

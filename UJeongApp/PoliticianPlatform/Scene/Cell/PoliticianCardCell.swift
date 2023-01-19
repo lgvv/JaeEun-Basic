@@ -6,20 +6,26 @@
 //
 
 import UIKit
+import Combine
 
 final class PoliticianCardCell: BaseCollectionViewCell {
+    typealias ViewModel = PoliticianCardCellViewModel
     
+    private var cancelBag = Set<AnyCancellable>()
     // MARK: - Binding
     
-    func bind(_ viewModel: PoliticianCardCellViewModel) {
-        self.thumbnailImageView.image = UIImage()
-        self.nameLabel.text = viewModel.infomation.name
-//        self.partyLabel.text = viewModel.infomation.party
-        self.descriptionLabel.text = ""
+    func bind(viewModel: ViewModel) {
+        viewModel.$infomation
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] information in
+                guard let self else { return }
+                
+                self.nameLabel.text = information.name
+            }.store(in: &cancelBag)
     }
     
     override func initialize() {
-        
+        self.configureUI()
     }
     
     // MARK: - UIComponents
@@ -42,15 +48,15 @@ final class PoliticianCardCell: BaseCollectionViewCell {
 
 extension PoliticianCardCell {
     func configureUI() {
-        contentView.addSubview(thumbnailImageView)
-        thumbnailImageView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview().inset(10)
-            $0.height.equalTo(thumbnailImageView.snp.width).multipliedBy(1.2)
-        }
+//        contentView.addSubview(thumbnailImageView)
+//        thumbnailImageView.snp.makeConstraints {
+//            $0.top.leading.trailing.equalToSuperview().inset(10)
+//            $0.height.equalTo(thumbnailImageView.snp.width).multipliedBy(1.2)
+//        }
         
         contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints {
-            $0.top.leading.trailing.equalTo(thumbnailImageView)
+            $0.edges.equalToSuperview()
         }
     }
 }

@@ -73,8 +73,8 @@ final class NoticeViewController: UIViewController {
     var location = UIBarButtonItem()
     
     lazy var collectionView: UICollectionView = {
-        let layout = createLayout()
-        var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        let layout = createLayout()
+        var cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.register(Reusable.notice)
         cv.refreshControl = UIRefreshControl()
         
@@ -83,16 +83,6 @@ final class NoticeViewController: UIViewController {
 }
 
 extension NoticeViewController {
-    func createLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection in
-            
-            switch section {
-            case 0: return UICollectionViewLayoutSet.shared.notice()
-            default: return UICollectionViewLayoutSet.shared.notice()
-            }
-        }
-    }
-    
     func configureUI() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {

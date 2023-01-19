@@ -44,7 +44,6 @@
 		B1CA9A45296009560016EFCD /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A44296009560016EFCD /* NoticeCell.swift */; };
 		B1CA9A48296009950016EFCD /* NoticeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */; };
 		B1CA9A4A296009B60016EFCD /* NoticeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A49296009B60016EFCD /* NoticeSection.swift */; };
-		B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */; };
 		B1CA9A53296029890016EFCD /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A52296029890016EFCD /* UIViewController+Rx.swift */; };
 		B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A55296029B30016EFCD /* NSCollectionLayoutItem+.swift */; };
 		B1CA9A58296029D30016EFCD /* NSCollectionLayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA9A57296029D30016EFCD /* NSCollectionLayoutSize.swift */; };
@@ -120,7 +119,6 @@
 		B1CA9A44296009560016EFCD /* NoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
 		B1CA9A47296009950016EFCD /* NoticeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCellViewModel.swift; sourceTree = "<group>"; };
 		B1CA9A49296009B60016EFCD /* NoticeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeSection.swift; sourceTree = "<group>"; };
-		B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayoutSet.swift; sourceTree = "<group>"; };
 		B1CA9A52296029890016EFCD /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		B1CA9A55296029B30016EFCD /* NSCollectionLayoutItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutItem+.swift"; sourceTree = "<group>"; };
 		B1CA9A57296029D30016EFCD /* NSCollectionLayoutSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutSize.swift; sourceTree = "<group>"; };
@@ -252,14 +250,6 @@
 				B18EB8F5295DFA9D001E08D7 /* UJeongAppTests.swift */,
 			);
 			path = UJeongAppTests;
-			sourceTree = "<group>";
-		};
-		B19F9B7B296D4CC100F66A9F /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B1CA9A4B2960184F0016EFCD /* UICollectionViewLayoutSet.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		B19F9B7C296D5E6100F66A9F /* Scene */ = {
@@ -441,7 +431,6 @@
 				B18EB8DE295DFA9B001E08D7 /* AppDelegate.swift */,
 				B18EB8E0295DFA9B001E08D7 /* SceneDelegate.swift */,
 				B1CA9A6729616A290016EFCD /* Application.swift */,
-				B19F9B7B296D4CC100F66A9F /* Utils */,
 				B1CA9A29295FF4280016EFCD /* SupportingFiles */,
 			);
 			path = APP;
@@ -687,7 +676,6 @@
 				B1CA9A612960A24E0016EFCD /* NoticeNavigator.swift in Sources */,
 				B1CA9A56296029B30016EFCD /* NSCollectionLayoutItem+.swift in Sources */,
 				B1CA9A3D295FF83F0016EFCD /* BaseTableViewCell.swift in Sources */,
-				B1CA9A4C2960184F0016EFCD /* UICollectionViewLayoutSet.swift in Sources */,
 				B1CA9A26295FF4050016EFCD /* ViewModelType.swift in Sources */,
 				B1E2050329780ACF00643B91 /* LocalStringFileService.swift in Sources */,
 			);
