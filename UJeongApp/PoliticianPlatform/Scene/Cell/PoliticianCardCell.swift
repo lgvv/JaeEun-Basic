@@ -24,8 +24,8 @@ final class PoliticianCardCell: BaseCollectionViewCell {
                 let assetName = "서울시-" + information.gu.rawValue + ".jpeg"
                 self.thumbnailImageView.image = UIImage(assetName: assetName)
                 
-                self.nameLabel.text = information.name
-                self.guLabel.text = information.gu.rawValue
+                let basicInfo = information.name + " (" + information.gu.rawValue + ")"
+                self.basicInfoLabel.text = basicInfo
                 self.partyLabel.text = information.party.rawValue
                 
             }.store(in: &cancelBag)
@@ -48,8 +48,7 @@ final class PoliticianCardCell: BaseCollectionViewCell {
         return $0
     }(UIStackView())
     
-    private lazy var nameLabel = UILabel() // 이름
-    private lazy var guLabel = UILabel() // 구
+    private lazy var basicInfoLabel = UILabel() // 이름
     private lazy var partyLabel = UILabel() // 당
     
     private lazy var descriptionLabel: UILabel = {
@@ -61,18 +60,24 @@ final class PoliticianCardCell: BaseCollectionViewCell {
 
 extension PoliticianCardCell {
     func configureUI() {
-        contentView.layer.cornerRadius = 12
+        layer.cornerRadius = 12.0
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.1
+        layer.shadowRadius = 8.0
+        
+        contentView.layer.cornerRadius = 12.0
         contentView.layer.borderWidth = 2
+        
+        contentView.backgroundColor = .systemBackground // 이게 설정되어야 그림자 잘보임
         
         contentView.addSubview(thumbnailImageView)
         thumbnailImageView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview().inset(10)
+            $0.top.leading.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(thumbnailImageView.snp.width).multipliedBy(1.2)
         }
         
         contentView.addSubview(stackView)
-        stackView.addArrangedSubview(nameLabel)
-        stackView.addArrangedSubview(guLabel)
+        stackView.addArrangedSubview(basicInfoLabel)
         stackView.addArrangedSubview(partyLabel)
         stackView.snp.makeConstraints {
             $0.top.equalTo(thumbnailImageView.snp.bottom).offset(10)
