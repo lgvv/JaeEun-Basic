@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Gu: String, CaseIterable {
+public enum Gu: String, Codable, CaseIterable {
     case 강서구
     case 양천구
     case 구로구

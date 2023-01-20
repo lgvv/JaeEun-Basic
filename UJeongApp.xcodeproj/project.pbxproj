@@ -244,9 +244,9 @@
 				B1CA9A8C29630C180016EFCD /* PoliticianPlatform */,
 				B1CA9A74296189F60016EFCD /* LocationSettingPlatform */,
 				B1CA9A64296169180016EFCD /* CoreModule */,
+				B190628D2979B98500145D9B /* DesignSystem */,
 				B1CA9A28295FF41C0016EFCD /* SDKModule */,
 				B10060D72976926B001359A9 /* GoogleService-Info.plist */,
-				B190628D2979B98500145D9B /* DesignSystem */,
 			);
 			path = UJeongApp;
 			sourceTree = "<group>";

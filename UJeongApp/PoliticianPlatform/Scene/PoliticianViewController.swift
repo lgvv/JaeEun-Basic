@@ -67,6 +67,7 @@ class PoliticianViewController: UIViewController {
         
         var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.delegate = self
+        cv.showsVerticalScrollIndicator = false
         
         cv.register(Reusable.card)
         
@@ -78,12 +79,13 @@ extension PoliticianViewController {
     func configureUI() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(10)
+            $0.top.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
     func configureNavigationItem() {
-        
+        navigationItem.title = "의원"
     }
 }
 

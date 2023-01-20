@@ -16,7 +16,8 @@ struct Politician: Codable {
         
         // MARK: - Busan
         struct Infomation: Codable {
-            let gu, name: String
+            let gu: Gu
+            let name: String
             let party: Party
             let imageUrlString: String
             
