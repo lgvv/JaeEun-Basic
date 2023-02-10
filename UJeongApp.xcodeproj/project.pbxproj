@@ -30,6 +30,7 @@
 		B19062862979AF7800145D9B /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B19062852979AF7800145D9B /* Nuke */; };
 		B19062892979B91500145D9B /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19062882979B91500145D9B /* Asset.swift */; };
 		B190628B2979B97B00145D9B /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190628A2979B97B00145D9B /* UIImage+.swift */; };
+		B1906290297A8D8700145D9B /* PoliticianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190628F297A8D8700145D9B /* PoliticianDetailViewController.swift */; };
 		B19F9B80296FCB9600F66A9F /* UJeongMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */; };
 		B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B82296FE39400F66A9F /* AppStorageService.swift */; };
 		B19F9B85296FE54100F66A9F /* UJeongSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F9B84296FE54100F66A9F /* UJeongSDK.swift */; };
@@ -109,6 +110,7 @@
 		B18EB8F5295DFA9D001E08D7 /* UJeongAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UJeongAppTests.swift; sourceTree = "<group>"; };
 		B19062882979B91500145D9B /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		B190628A2979B97B00145D9B /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		B190628F297A8D8700145D9B /* PoliticianDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianDetailViewController.swift; sourceTree = "<group>"; };
 		B19F9B7F296FCB9600F66A9F /* UJeongMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UJeongMain.swift; sourceTree = "<group>"; };
 		B19F9B82296FE39400F66A9F /* AppStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageService.swift; sourceTree = "<group>"; };
 		B19F9B84296FE54100F66A9F /* UJeongSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UJeongSDK.swift; sourceTree = "<group>"; };
@@ -285,6 +287,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B1906291297A8DA500145D9B /* Politician */ = {
+			isa = PBXGroup;
+			children = (
+				B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */,
+				B1CA9A8229630B5A0016EFCD /* PoliticianViewModel.swift */,
+				B1CA9A8429630B730016EFCD /* PoliticianNavigator.swift */,
+				B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */,
+			);
+			path = Politician;
+			sourceTree = "<group>";
+		};
+		B1906292297A8DB100145D9B /* PoliticianDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B190628F297A8D8700145D9B /* PoliticianDetailViewController.swift */,
+			);
+			path = PoliticianDetail;
+			sourceTree = "<group>";
+		};
 		B19F9B7C296D5E6100F66A9F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,10 +329,8 @@
 		B19F9B7E296D637500F66A9F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				B1CA9A7C2962FB190016EFCD /* PoliticianViewController.swift */,
-				B1CA9A8229630B5A0016EFCD /* PoliticianViewModel.swift */,
-				B1CA9A8429630B730016EFCD /* PoliticianNavigator.swift */,
-				B1CA9A9129632AC80016EFCD /* PoliticianSection.swift */,
+				B1906291297A8DA500145D9B /* Politician */,
+				B1906292297A8DB100145D9B /* PoliticianDetail */,
 				B1CA9A9529632B690016EFCD /* Cell */,
 			);
 			path = Scene;
@@ -672,6 +691,7 @@
 				B10060E6297698E4001359A9 /* FirebaseConfiguration.swift in Sources */,
 				B19F9B83296FE39400F66A9F /* AppStorageService.swift in Sources */,
 				B18EB8E3295DFA9B001E08D7 /* NoticeViewController.swift in Sources */,
+				B1906290297A8D8700145D9B /* PoliticianDetailViewController.swift in Sources */,
 				B1CA9A8B29630C040016EFCD /* PoliticianRepository.swift in Sources */,
 				B1E204FB2977DAB900643B91 /* JsonHelper.swift in Sources */,
 				B1CA9AC029647E1C0016EFCD /* Gu.swift in Sources */,

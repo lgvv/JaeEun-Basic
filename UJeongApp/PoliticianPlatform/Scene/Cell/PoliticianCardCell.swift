@@ -68,7 +68,7 @@ extension PoliticianCardCell {
         contentView.layer.cornerRadius = 12.0
         contentView.layer.borderWidth = 2
         
-        contentView.backgroundColor = .systemBackground // 이게 설정되어야 그림자 잘보임
+        contentView.backgroundColor = .systemBackground
         
         contentView.addSubview(thumbnailImageView)
         thumbnailImageView.snp.makeConstraints {
@@ -84,6 +84,6 @@ extension PoliticianCardCell {
             $0.leading.trailing.equalToSuperview().inset(10)
         }
         
-        
+        // TODO: - Pros 적용하기
     }
 }
