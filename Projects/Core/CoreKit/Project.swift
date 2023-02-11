@@ -6,8 +6,17 @@ let project = Project.make(
     targets: [
         .staticLibrary(
             name: "CoreKit",
-            dependencies: []
+            dependencies: [
+                .project(target: "BaseArchitecture", path: "../CoreKit"),
+                .project(target: "CurationExtensions", path: "../CoreKit"),
+                .project(target: "CurationProtocols", path: "../CoreKit"),
+                .project(target: "Models", path: "../CoreKit"),
+            ]
         ),
         .unitTests(name: "CoreKit"),
+        .staticLibraryTarget(name: "Models"),
+        .staticLibraryTarget(name: "BaseArchitecture"),
+        .staticLibraryTarget(name: "CurationExtensions"),
+        .staticLibraryTarget(name: "CurationProtocols")
     ]
 )

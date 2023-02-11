@@ -13,7 +13,6 @@ extension Target {
             bundleId: "com.curation.\(name)",
             deploymentTarget: .iOS(targetVersion: "15.0", devices: [.iphone]),
             infoPlist: .file(path: "SupportingFiles/\(name)-Info.plist"),
-//            infoPlist: .default,
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             entitlements: .none,
