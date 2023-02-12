@@ -11,7 +11,13 @@ let project = Project.make(
         .unitTests(name: "CoreKit"),
         .staticLibraryTarget(name: "Models"),
         .staticLibraryTarget(name: "BaseArchitecture"),
-        .staticLibraryTarget(name: "CurationExtensions"),
+        .staticLibraryTarget(
+            name: "CurationExtensions",
+            dependencies: [
+                .external(name: "RxSwift"),
+                .external(name: "RxCocoa")
+            ]
+        ),
         .staticLibraryTarget(name: "CurationProtocols")
     ]
 )
