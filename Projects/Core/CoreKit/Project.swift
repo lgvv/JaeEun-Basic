@@ -18,6 +18,7 @@ let project = Project.make(
                 .external(name: "RxCocoa")
             ]
         ),
-        .staticLibraryTarget(name: "CurationProtocols")
+        .staticLibraryTarget(name: "CurationProtocols"),
+        .staticLibraryTarget(name: "ReusableKit")
     ]
 )

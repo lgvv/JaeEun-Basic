@@ -15,6 +15,7 @@ let project = Project.make(
             .project(target: "CurationExtensions", path: "../Core/CoreKit"),
             .project(target: "CurationProtocols", path: "../Core/CoreKit"),
             .project(target: "Models", path: "../Core/CoreKit"),
+            .project(target: "ReusableKit", path: "../Core/CoreKit"),
             .external(name: "SnapKit"),
             .external(name: "Nuke"),
             .external(name: "RxSwift"),

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseCollectionViewCell: UICollectionViewCell {
+open class BaseCollectionViewCell: UICollectionViewCell {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,9 +16,9 @@ public class BaseCollectionViewCell: UICollectionViewCell {
         self.initialize()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func initialize() { /* override point */ }
+    open func initialize() { /* override point */ }
 }
