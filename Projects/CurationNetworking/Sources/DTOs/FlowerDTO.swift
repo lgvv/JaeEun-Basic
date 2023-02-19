@@ -15,7 +15,7 @@ extension DTO {
         public var thumbnailUrlString: String
         public var floriography: String
         public var story: String
-        public var othersUrlString: [String]
+        public var othersUrlStrings: [String]
         
         enum CodingKeys: String, CodingKey {
             case id = "flower_id"
@@ -23,7 +23,7 @@ extension DTO {
             case thumbnailUrlString = "flower_profile_img_url"
             case floriography = "flower_floriography"
             case story = "flower_story"
-            case othersUrlString = "flower_pictures_url"
+            case othersUrlStrings = "flower_pictures_url"
         }
     }
 }

@@ -7,8 +7,10 @@
 //
 
 import Foundation
+
 import CurationNetworking
 import Models
+import RxSwift
 
 final class FlowerRepositoryImpl {
     
@@ -18,9 +20,32 @@ final class FlowerRepositoryImpl {
         self.network = network
     }
     
-    func fetchAllFlower() {
-        network.request(GetFlowerAPI()) { it in
-            print("it")
+    func fetchAllFlower() -> Observable<FlowerModels.FetchFlowerList.Reponse> {
+        return network.request(GetFlowerAPI())
+            .compactMap { [weak self] response in
+                return self?.convertToFlowerList(response)
+            }
+    }
+    
+    private func convertToFlowerList(_ dto: DTO.Flower) -> FlowerModels.FetchFlowerList.Reponse {
+        return .init(id: dto.id,
+                     name: dto.name,
+                     thumbnailUrlString: dto.thumbnailUrlString,
+                     floriography: dto.floriography,
+                     story: dto.story,
+                     othersUrlStrings: dto.othersUrlStrings)
+    }
+}
+
+enum FlowerModels {
+    enum FetchFlowerList {
+        struct Reponse {
+            var id: Int
+            var name: String
+            var thumbnailUrlString: String
+            var floriography: String
+            var story: String
+            var othersUrlStrings: [String]
         }
     }
 }
