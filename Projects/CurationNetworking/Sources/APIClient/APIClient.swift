@@ -23,33 +23,10 @@ public final class APIClient {
     /// API 통신 버전
     var apiVersion: String { "v1" }
     
-//    public func request<T: Codable>(
-//        endpoint: APIClient.Endpoint,
-//        completion: @escaping (T) -> Void
-//    ) {
-//        AF.request(endpoint.uriString,
-//                   method: endpoint.method.httpMethodValue,
-//                   parameters: nil,
-//                   headers: nil
-//        )
-//        .validate(statusCode: 200..<500)
-//        .responseDecodable(of: T.self) { response in
-//            switch response.result {
-//            case .success(let result):
-//                do {
-//                    let jsonData = try JSONSerialization.data(withJSONObject: result)
-//                    let result = try JSONDecoder().decode(T.self, from: jsonData)
-//                    completion(result)
-//                } catch {
-//                    print("🚨 \(#function): decoing error")
-//                }
-//            case .failure(let error):
-//                print("🚨 \(#function): \(error.localizedDescription)")
-//            }
-//        }
-//    }
+    private init() { }
     
-    public func send<API>(
+    /// api request
+    public func request<API>(
         _ api: API,
         completion: @escaping (API.Response) -> Void) where API : ServiceAPI {
         AF.request(api.endpoint.uriString,

@@ -13,13 +13,3 @@ public struct GetFlowerAPI: ServiceAPI {
     
     public var endpoint = APIClient.Endpoint.flowers
 }
-
-class AA {
-    let apiClient = APIClient()
-    
-    func ss() {
-        apiClient.send(GetFlowerAPI()) { it in
-            
-        }
-    }
-}
