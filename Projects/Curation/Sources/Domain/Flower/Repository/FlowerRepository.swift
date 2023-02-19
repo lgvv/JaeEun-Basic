@@ -12,7 +12,11 @@ import CurationNetworking
 import Models
 import RxSwift
 
-final class FlowerRepositoryImpl {
+protocol FlowerRepository {
+    func fetchAllFlower() -> Observable<FlowerModels.FetchFlowerList.Reponse>
+}
+
+final class FlowerRepositoryImpl: FlowerRepository {
     
     private let network: NetworkServiceProtocol
     
@@ -34,18 +38,5 @@ final class FlowerRepositoryImpl {
                      floriography: dto.floriography,
                      story: dto.story,
                      othersUrlStrings: dto.othersUrlStrings)
-    }
-}
-
-enum FlowerModels {
-    enum FetchFlowerList {
-        struct Reponse {
-            var id: Int
-            var name: String
-            var thumbnailUrlString: String
-            var floriography: String
-            var story: String
-            var othersUrlStrings: [String]
-        }
     }
 }
