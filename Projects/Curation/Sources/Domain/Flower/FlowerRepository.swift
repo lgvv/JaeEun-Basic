@@ -11,6 +11,16 @@ import CurationNetworking
 import Models
 
 final class FlowerRepositoryImpl {
-    let network = NetworkService()
     
+    private let network: NetworkServiceProtocol
+    
+    init(network: NetworkServiceProtocol = NetworkService()) {
+        self.network = network
+    }
+    
+    func fetchAllFlower() {
+        network.request(GetFlowerAPI()) { it in
+            print("it")
+        }
+    }
 }

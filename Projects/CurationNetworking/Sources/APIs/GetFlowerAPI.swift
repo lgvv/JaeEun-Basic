@@ -12,4 +12,6 @@ public struct GetFlowerAPI: ServiceAPI {
     public typealias Response = DTO.Flower
     
     public var endpoint = APIEndpoint.flowers
+    
+    public init() { }
 }

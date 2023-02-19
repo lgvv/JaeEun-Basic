@@ -12,7 +12,7 @@ public protocol NetworkServiceProtocol {
     func request<API>(_ api: API, completion: @escaping (API.Response) -> Void) where API : ServiceAPI
 }
 
-public final class NetworkService {
+public final class NetworkService: NetworkServiceProtocol {
     public init() { }
     
     public func request<API>(_ api: API, completion: @escaping (API.Response) -> Void) where API : ServiceAPI {
