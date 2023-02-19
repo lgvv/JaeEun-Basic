@@ -10,14 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-public protocol ServiceAPI {
-    associatedtype Response: Decodable
-    
-    var endpoint: APIClient.Endpoint { get set }
-}
-
-public final class APIClient {
-    
+final class APIClient {
     /// 싱글톤 객체
     static var shared = APIClient()
     /// API 통신 버전
@@ -26,9 +19,10 @@ public final class APIClient {
     private init() { }
     
     /// api request
-    public func request<API>(
+    func request<API>(
         _ api: API,
-        completion: @escaping (API.Response) -> Void) where API : ServiceAPI {
+        completion: @escaping (API.Response) -> Void
+    ) where API : ServiceAPI {
         AF.request(api.endpoint.uriString,
                    method: api.endpoint.method.httpMethodValue
         )

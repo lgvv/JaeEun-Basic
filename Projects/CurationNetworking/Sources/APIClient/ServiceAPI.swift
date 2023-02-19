@@ -1,5 +1,5 @@
 //
-//  GetFlowerAPI.swift
+//  ServiceAPI.swift
 //  CurationNetworking
 //
 //  Created by Hamlit Jason on 2023/02/19.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-public struct GetFlowerAPI: ServiceAPI {
-    public typealias Response = DTO.Flower
+public protocol ServiceAPI {
+    associatedtype Response: Decodable
     
-    public var endpoint = APIEndpoint.flowers
+    var endpoint: APIEndpoint { get set }
 }
